@@ -17,11 +17,6 @@ class CreatePictTable extends Migration
             $table->bigIncrements('id');
             $table->foreign('id')
                   ->references('id')
-                  ->on('category')
-                  ->onDelete('cascade');
-            $table->string('username',15);
-            $table->foreign('username')
-                  ->references('username')
                   ->on('user')
                   ->onDelete('cascade');
             $table->binary('portfolio');
