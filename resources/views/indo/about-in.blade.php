@@ -1,4 +1,4 @@
-@extinds('app')
+@extends('app')
 
 @section('title', 'Tentang | Vind Website')
 
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-@indsection					
+@endsection					
 	
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
