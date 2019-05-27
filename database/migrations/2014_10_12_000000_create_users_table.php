@@ -15,19 +15,11 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('id')
-                  ->references('id')
-                  ->on('category')
-                  ->onDelete('cascade');
-            $table->string('fulname',30);
-            $table->string('username',15)->primary();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('email',30)->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('phone',15);
-            $table->string('location',30);
-            DB::statement("ALTER TABLE users ADD profile_pict MEDIUMBLOB");
             $table->timestamps();
         });
     }
