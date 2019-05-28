@@ -63,7 +63,7 @@
       </div>
       <div class="form-group">
         <label for="category">Kategori:</label>
-        <select class="custom-select" width="100%" name="category" required>
+        <select class="custom-select" width="100%" name="category" id="kateg" required>
           <option value="model">Model</option>
           <option value="photographer">Photographer</option>
           <option value="fashion">Fashion Designer</option>
@@ -72,25 +72,37 @@
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Mohon pilih kategori pekerjaan anda.</div>
       </div>
-      <div class="form-group">
-        <label for="gender">Jenis kelamin:</label>
-        <select class="custom-select" width="100%" name="gender" required>
-          <option value="male">Laki-laki</option>
-          <option value="female">Perempuan</option>
-        </select>
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Mohon pilih jenis kelamin anda.</div>
-      </div>
-      <div class="form-group">
-        <label for="hgt">Tinggi badan:</label>
-        <input type="text" class="form-control" id="hgt" placeholder="Masukkan tinggi badan(cm)" name="height" required>
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Mohon diisi.</div>
+      <div class="model-add">
+        <div class="form-group">
+          <label for="gender">Jenis kelamin:</label>
+          <select class="custom-select" width="100%" name="gender" required>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+          </select>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Mohon pilih jenis kelamin anda.</div>
+        </div>
+        <div class="form-group">
+          <label for="hgt">Tinggi badan:</label>
+          <input type="text" class="form-control" id="hgt" placeholder="Masukkan tinggi badan(cm)" name="height" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Mohon diisi.</div>
+        </div>
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%">Buat akun baru</button>
     </form>
   </div>
 </div><br><br>
+
+<script>
+jQuery('#kateg').on('change',function(){
+    if(jQuery(this).val()=='model'){
+        jQuery('.model-add').show();
+    } else {
+        jQuery('.model-add').hide();
+    }
+});
+</script>
 @endsection
 
 <script>
