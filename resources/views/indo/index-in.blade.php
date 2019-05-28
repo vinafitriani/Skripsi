@@ -4,8 +4,8 @@
 
 <div class="header">
 	<p>Language : &nbsp  
-	<a href="/inbox-en">English</a>&nbsp &nbsp;
-	<a href="/inbox-in">Bahasa</a>&nbsp &nbsp; </p>
+	<a href="/index-en">English</a>&nbsp &nbsp;
+	<a href="/index-in">Bahasa</a>&nbsp &nbsp; </p>
 </div>
 
 @section('content')
