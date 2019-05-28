@@ -14,7 +14,7 @@ class CreatePictTable extends Migration
     public function up()
     {
         Schema::create('pict', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigInteger('id')->unsigned();
             $table->foreign('id')
                   ->references('id')
                   ->on('user')

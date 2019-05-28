@@ -22,7 +22,7 @@
 <h1 style="text-align:center; color:#8397b3">Signup Page</h1>
 <div class="container">
   <div class="shadow p-4 mb-4 bg-white">
-    <form action="/action_page.php" class="needs-validation" style="float:center" novalidate>
+    <form method="POST" action="{{ route('reg_user') }}" class="needs-validation" style="float:center" novalidate>
       <div class="form-group">
         <label for="full-name">Name:</label>
         <input type="text" class="form-control" id="full-name" placeholder="Enter your name" name="fullname" required>
@@ -56,14 +56,14 @@
       <div class="form-group">
         <label for="prof-pict">Profile picture:</label>
         <form action="/action_page.php">
-          <input type="file" name="profile-pict" accept="image/*" required>
+          <input type="file" name="profile_pict" accept="image/*" required>
         </form>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please upload your profile picture.</div>
       </div>
       <div class="form-group">
         <label for="category">Category:</label>
-        <select class="custom-select" width="100%" required>
+        <select class="custom-select" width="100%" name="category" required>
           <option value="model">Model</option>
           <option value="photographer">Photographer</option>
           <option value="fashion">Fashion Designer</option>
@@ -74,7 +74,7 @@
       </div>
       <div class="form-group">
         <label for="gender">Gender:</label>
-        <select class="custom-select" width="100%" required>
+        <select class="custom-select" width="100%" name="gender" required>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>

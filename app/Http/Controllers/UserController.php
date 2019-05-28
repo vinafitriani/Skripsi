@@ -3,25 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create_en()
+    public function create_en(Request $request)
     {
         $entry = [
             'inputFullname' => $request->inputFullname,
@@ -34,10 +25,10 @@ class UserController extends Controller
             'inputGender' => $request->inputGender,
             'inputHeight' => $request->inputHeight,
         ];
-        return view('post.buatakun', compact('entry'));
+        return view('english.signup-en', compact('entry'));
     }
 
-    public function create_in()
+    public function create_in(Request $request)
     {
         $entry = [
             'inputFullname' => $request->inputFullname,
@@ -50,7 +41,7 @@ class UserController extends Controller
             'inputGender' => $request->inputGender,
             'inputHeight' => $request->inputHeight,
         ];
-        return view('post.buatakun', compact('entry'));
+        return view('indo.signup-in', compact('entry'));
     }
 
     /**

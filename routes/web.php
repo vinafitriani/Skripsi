@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('english.index-en');
 });
 
 Auth::routes();
@@ -47,3 +47,6 @@ Route::get('/profile-model-in', 'UserController@profile_model_in') -> name('prof
 Route::get('/profile-plk-in', 'UserController@profile_plk_in') -> name('profile-plk-in');
 Route::get('/signin-in', 'UserController@signin_in') -> name('signin-in');
 Route::get('/signup-in', 'UserController@create_in') -> name('signup-in');
+
+
+Route::post('/registered', 'RegisterController@create')->name('reg_user');
