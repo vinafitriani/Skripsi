@@ -24,10 +24,10 @@ class CreateUserTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('email',30)->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at');
             $table->string('phone',15)->nullable();
-            $table->string('location',30)->nullable();
-            $table->binary('profile_pict')->nullable();
+            $table->string('location',30);
+            $table->binary('profile_pict');
             $table->string('category',25);
             $table->timestamps();
         });

@@ -19,8 +19,8 @@ class CreateUserModelTable extends Migration
                   ->references('id')
                   ->on('user')
                   ->onDelete('cascade');
-            $table->string('gender')->nullable();
-            $table->integer('height')->nullable();
+            $table->string('gender');
+            $table->integer('height');
             $table->timestamps();
         });
     }

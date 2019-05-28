@@ -23,12 +23,34 @@ class UserController extends Controller
      */
     public function create_en()
     {
-        return view('english.signup-en');
+        $entry = [
+            'inputFullname' => $request->inputFullname,
+            'inputUsername' => $request->inputUsername,
+            'inputPassword' => $request->inputPassword,
+            'inputEmail' => $request->inputEmail,
+            'inputLocation' => $request->inputLocation,
+            'inputProfilepict' => $request->inputProfilepict,
+            'inputCategory' => $request->inputCategory,
+            'inputGender' => $request->inputGender,
+            'inputHeight' => $request->inputHeight,
+        ];
+        return view('post.buatakun', compact('entry'));
     }
 
     public function create_in()
     {
-        return view('indo.signup-in');
+        $entry = [
+            'inputFullname' => $request->inputFullname,
+            'inputUsername' => $request->inputUsername,
+            'inputPassword' => $request->inputPassword,
+            'inputEmail' => $request->inputEmail,
+            'inputLocation' => $request->inputLocation,
+            'inputProfilepict' => $request->inputProfilepict,
+            'inputCategory' => $request->inputCategory,
+            'inputGender' => $request->inputGender,
+            'inputHeight' => $request->inputHeight,
+        ];
+        return view('post.buatakun', compact('entry'));
     }
 
     /**
