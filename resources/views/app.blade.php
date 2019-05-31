@@ -5,10 +5,10 @@
 	<title>@yield('title')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-	<link rel="stylesheet" href="{{ asset ('fonts/icomoon/style.css')}}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">	
+	<link rel="stylesheet" href="{{ asset ('css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{ asset ('css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ asset ('js/bootstrap.min.js')}}">
 	<link rel="stylesheet" href="{{ asset ('css/style.css')}}">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

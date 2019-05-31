@@ -28,7 +28,7 @@ class CreateUserTable extends Migration
             $table->string('phone',15)->nullable();
             $table->string('location',30);
             $table->binary('profile_pict');
-            $table->string('category',25);
+            $table->string('category');
             $table->timestamps();
         });
     }

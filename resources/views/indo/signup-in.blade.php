@@ -24,14 +24,14 @@
   <div class="shadow p-4 mb-4 bg-white">
     <form method="POST" action="{{ route('reg_user') }}" class="needs-validation" style="float:center" novalidate>
       <div class="form-group">
-        <label for="full-name">Nama:</label>
-        <input type="text" class="form-control" id="full-name" placeholder="Masukkan nama lengkap" name="fullname" required>
+        <label for="full_name">Nama:</label>
+        <input type="text" class="form-control" id="full_name" placeholder="Masukkan nama lengkap" name="fullname" maxlength="30" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Mohon diisi.</div>
       </div>
       <div class="form-group">
         <label for="uname">Username:</label>
-        <input type="text" class="form-control" id="uname" placeholder="Masukkan username" name="username" required>
+        <input type="text" class="form-control" id="uname" placeholder="Masukkan username" name="username" maxlength="15" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Mohon diisi.</div>
       </div>
@@ -43,7 +43,7 @@
       </div>
       <div class="form-group">
         <label for="mail">Email:</label>
-        <input type="text" class="form-control" id="mail" placeholder="Masukkan alamat email" name="email" required>
+        <input type="text" class="form-control" id="mail" placeholder="Masukkan alamat email" name="email" maxlength="30" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Mohon diisi.</div>
       </div>
@@ -54,7 +54,7 @@
         <div class="invalid-feedback">Mohon diisi.</div>
       </div>
       <div class="form-group">
-        <label for="prof-pict">Foto Profil:</label>
+        <label for="prof_pict">Foto Profil:</label>
         <form action="/action_page.php">
           <input type="file" name="profile_pict" accept="image/*" required>
         </form>
@@ -84,7 +84,7 @@
         </div>
         <div class="form-group">
           <label for="hgt">Tinggi badan:</label>
-          <input type="text" class="form-control" id="hgt" placeholder="Masukkan tinggi badan(cm)" name="height" required>
+          <input type="text" class="form-control" id="hgt" placeholder="Masukkan tinggi badan(cm)" name="height" maxlength="3" required>
           <div class="valid-feedback">Valid.</div>
           <div class="invalid-feedback">Mohon diisi.</div>
         </div>
@@ -103,7 +103,7 @@ jQuery('#kateg').on('change',function(){
     }
 });
 </script>
-@endsection
+
 
 <script>
       // This example displays an address form, using the autocomplete feature
@@ -176,3 +176,5 @@ jQuery('#kateg').on('change',function(){
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
         async defer></script>
+
+        @endsection

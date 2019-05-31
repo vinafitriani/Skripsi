@@ -46,7 +46,7 @@
 									
 										<!-- Modal body -->
 										<div class="modal-body">
-											<form action="/action_page.php" class="was-validated">
+											<form action="/action_page.php">
 												<div class="form-group">
 													<label for="uname">Name:</label>
 													<input type="text" class="form-control" id="uname" placeholder="Enter fullname" name="fullname">
@@ -57,7 +57,7 @@
 												</div>
 												<div class="form-group">
 													<label for="loc">Location:</label>
-													<input type="text" class="form-control" id="autocomplete" placeholder="Enter location" onFocus="geolocate()" name="location">
+													<input type="text" class="form-control" id="autocomplete" placeholder="Enter city" onFocus="geolocate()" name="location">
 												</div>
 												<div class="form-group">
 													<label for="gender">Gender:</label>
@@ -251,12 +251,6 @@
 	</div>
 	@endsection						
 	
-	<div class="header">
-		<p>Language : &nbsp  
-		<a href="/profile-model-en">English</a>&nbsp &nbsp;
-		<a href="/profile-model-in">Bahasa</a>&nbsp &nbsp; </p>
-	</div>
-
 	<script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.

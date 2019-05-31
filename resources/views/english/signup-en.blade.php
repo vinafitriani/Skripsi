@@ -22,16 +22,16 @@
 <h1 style="text-align:center; color:#8397b3">Signup Page</h1>
 <div class="container">
   <div class="shadow p-4 mb-4 bg-white">
-    <form method="POST" action="{{ route('reg_user') }}" class="needs-validation" style="float:center" novalidate>
+    <form method="POST" action="{{ route('reg_user') }}" class="was-validated" style="float:center" novalidate>
       <div class="form-group">
         <label for="full-name">Name:</label>
-        <input type="text" class="form-control" id="full-name" placeholder="Enter your name" name="fullname" required>
+        <input type="text" class="form-control" id="full-name" placeholder="Enter your name" name="fullname" maxlength="30" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
       <div class="form-group">
         <label for="uname">Username:</label>
-        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="username" required>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="username" maxlength="15" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
@@ -43,7 +43,7 @@
       </div>
       <div class="form-group">
         <label for="mail">Email:</label>
-        <input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email" required>
+        <input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email" maxlength="30" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
@@ -84,7 +84,7 @@
         </div>
         <div class="form-group">
           <label for="hgt">Height:</label>
-          <input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height" required>
+          <input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height" maxlength="3" required>
           <div class="valid-feedback">Valid.</div>
           <div class="invalid-feedback">Please fill out this field.</div>
         </div>
@@ -103,7 +103,6 @@ jQuery('#kateg').on('change',function(){
     }
 });
 </script>
-@endsection
 
 <script>
       // This example displays an address form, using the autocomplete feature
@@ -172,7 +171,33 @@ jQuery('#kateg').on('change',function(){
           });
         }
       }
-    </script>
+</script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
         async defer></script>
+
+    <!-- form validation - https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_validation_needs&stacked=h -->
+<!--<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+@endsection
