@@ -31,6 +31,7 @@ Route::get('/profile-model-en', 'UserController@profile_model_en') -> name('prof
 Route::get('/profile-plk-en', 'UserController@profile_plk_en') -> name('profile-plk-en');
 Route::get('/signin-en', 'UserController@signin_en') -> name('signin-en');
 Route::get('/signup-en', 'UserController@create_en') -> name('signup-en');
+Route::get('/tes', 'UserController@test') -> name('tes');
 
 
 Route::get('/about-in', 'UserController@about_in') -> name('about-in');
@@ -47,6 +48,5 @@ Route::get('/profile-model-in', 'UserController@profile_model_in') -> name('prof
 Route::get('/profile-plk-in', 'UserController@profile_plk_in') -> name('profile-plk-in');
 Route::get('/signin-in', 'UserController@signin_in') -> name('signin-in');
 Route::get('/signup-in', 'UserController@create_in') -> name('signup-in');
-
 
 Route::post('/registered', 'RegisterController@create')->name('reg_user');

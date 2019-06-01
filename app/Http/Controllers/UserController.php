@@ -153,6 +153,10 @@ class UserController extends Controller
     {
         return view('english.signin-en');   
     }
+    public function test()
+    {
+        return view('english.tes');   
+    }
 
     /* Indo */
     public function about_in()

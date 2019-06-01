@@ -22,7 +22,7 @@
 <h1 style="text-align:center; color:#8397b3">Signup Page</h1>
 <div class="container">
   <div class="shadow p-4 mb-4 bg-white">
-    <form method="POST" action="{{ route('reg_user') }}" class="was-validated" style="float:center" novalidate>
+    <form method="POST" action="{{ route('reg_user') }}" class="needs-validation" style="float:center" novalidate> 
       <div class="form-group">
         <label for="full-name">Name:</label>
         <input type="text" class="form-control" id="full-name" placeholder="Enter your name" name="fullname" maxlength="30" required>
@@ -54,14 +54,6 @@
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
       <div class="form-group">
-        <label for="prof-pict">Profile picture:</label>
-        <form action="/action_page.php">
-          <input type="file" name="profile_pict" accept="image/*" required>
-        </form>
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Please upload your profile picture.</div>
-      </div>
-      <div class="form-group">
         <label for="category">Category:</label>
         <select class="custom-select" width="100%" name="category" id="kateg" required>
           <option value="model">Model</option>
@@ -89,7 +81,7 @@
           <div class="invalid-feedback">Please fill out this field.</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary" style="width:100%">create account</button>
+      <button type="submit" class="btn btn-primary" style="width:100%">Create Account</button>
     </form>
   </div>
 </div><br><br>
@@ -176,8 +168,8 @@ jQuery('#kateg').on('change',function(){
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
         async defer></script>
 
-    <!-- form validation - https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_validation_needs&stacked=h -->
-<!--<script>
+<!-- form validation - https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_validation_needs&stacked=h -->
+<script>
 // Disable form submissions if there are invalid fields
 (function() {
   'use strict';
@@ -196,7 +188,7 @@ jQuery('#kateg').on('change',function(){
     });
   }, false);
 })();
-</script>-->
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 

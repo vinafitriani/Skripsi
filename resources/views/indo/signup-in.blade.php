@@ -54,14 +54,6 @@
         <div class="invalid-feedback">Mohon diisi.</div>
       </div>
       <div class="form-group">
-        <label for="prof_pict">Foto Profil:</label>
-        <form action="/action_page.php">
-          <input type="file" name="profile_pict" accept="image/*" required>
-        </form>
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Mohon unggah foto profil.</div>
-      </div>
-      <div class="form-group">
         <label for="category">Kategori:</label>
         <select class="custom-select" width="100%" name="category" id="kateg" required>
           <option value="model">Model</option>
@@ -173,6 +165,28 @@ jQuery('#kateg').on('change',function(){
         }
       }
     </script>
+
+    <!-- form validation - https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_validation_needs&stacked=h -->
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
         async defer></script>
