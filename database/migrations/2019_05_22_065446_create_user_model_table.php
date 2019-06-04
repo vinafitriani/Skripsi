@@ -13,12 +13,14 @@ class CreateUserModelTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_model', function (Blueprint $table) {
-            $table->bigInteger('id')->unsigned();
-            $table->foreign('id')
-                  ->references('id')
-                  ->on('user')
-                  ->onDelete('cascade');
+        Schema::create('users_model', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('username', 30);
+            $table->foreign('username')
+                  ->references('username')
+                  ->on('users')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
             $table->string('gender');
             $table->integer('height');
             $table->timestamps();
@@ -32,6 +34,6 @@ class CreateUserModelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_model');
+        Schema::dropIfExists('users_model');
     }
 }

@@ -17,7 +17,7 @@ class CreateEventTable extends Migration
             $table->bigInteger('id')->unsigned();
             $table->foreign('id')
                   ->references('id')
-                  ->on('user')
+                  ->on('users')
                   ->onDelete('cascade');
             $table->string('subject',30);
             $table->string('name',15);

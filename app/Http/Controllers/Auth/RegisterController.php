@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\UserModel;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -30,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'home';
 
     /**
      * Create a new controller instance.
@@ -51,9 +50,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'fullname' => ['required', 'string', 'max:30'],
-            'username' => ['required', 'string', 'max:15', 'unique:user'],
-            'email' => ['required', 'string', 'email', 'max:30', 'unique:user'],
+            'fullname' => ['required', 'string', 'max:191'],
+            'username' => ['required', 'string', 'max:15', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:191', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
         ]);
     }
@@ -61,47 +60,33 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
+     * @param  array  $data
      * @return \App\User
      */
-    protected function create(Request $request)
+    protected function create(array $data)
     {
-        $user = new User;
+        // dd($data);
 
-        $user->fullname = $request->fullname;
-        $user->username = $request->username;
-        $user->password = Hash::make($request->password);
-        $user->remember_token = $request->fullname;
-        $user->email = $request->email;
-        $user->location = $request->location;
-        $user->profile_pict = $request->profile_pict;
-        $user->category = $request->category;
+        $user = User::create([
+            'fullname' => $data['fullname'],
+            'username' => $data['username'],
+            'password' => Hash::make($data['password']),
+            'remember_token' => str_random(10),
+            'email' => $data['email'],
+            'location' => $data['location'],
+            'category' => $data['category'],
+        ]);
 
-        $user->save();
+        $id = User::where('username', $data['username'])->first();
 
-        $id = User::where('username', $request->username)->first();
-
-        if ($request->category == 'model'){
-            $userModel = new UserModel;
-
-            $userModel->id = $id->id;
-            $userModel->username = $id->username;
-            $userModel->height = $request->height;
-            $userModel->gender = $request->gender;
-
-            $userModel->save();
+        if ($id->category == 'model'){
+            $usermodel = UserModel::create([
+                'username' => $id->username,
+                'gender' => $data['gender'],
+                'height' => $data['height'],
+            ]);
         }
 
-        if (!Request::is('signup-en')){
-            Auth::login($user);
-            return redirect()->action(
-                'UserController@index_en'
-            );
-        }
-        else{
-            Auth::login($user);
-            return redirect()->action(
-                'UserController@index_in'
-            );
-        }
+        return $user;
     }
 }

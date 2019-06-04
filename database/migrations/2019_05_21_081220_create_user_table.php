@@ -13,21 +13,21 @@ class CreateUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             // $table->foreign('id')
             //       ->references('id')
             //       ->on('category')
             //       ->onDelete('cascade');
-            $table->string('fullname',30);
+            $table->string('fullname',191);
             $table->string('username',15)->unique();
             $table->string('password');
             $table->rememberToken();
-            $table->string('email',30)->unique();
+            $table->string('email', 191)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone',15)->nullable();
-            $table->string('location',30);
-            $table->binary('profile_pict');
+            $table->string('location');
+            $table->binary('profile_pict')->nullable();
             $table->string('category');
             $table->timestamps();
         });
@@ -40,6 +40,6 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('users');
     }
 }
