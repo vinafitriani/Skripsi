@@ -17,7 +17,7 @@ class CreatePictTable extends Migration
             $table->bigInteger('id')->unsigned();
             $table->foreign('id')
                   ->references('id')
-                  ->on('user')
+                  ->on('users')
                   ->onDelete('cascade');
             $table->binary('portfolio');
             $table->timestamps();

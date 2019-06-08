@@ -18,14 +18,14 @@ class User extends Authenticatable
     protected $fillable = [
         'fullname',
         'username',
+        'password',
         'email',
+        'phone',
         'location',
-        'profile-pict'
+        'profile_pict',
+        'category',
     ];
 
-    protected $primaryKey = 'username';
-    public $timeStamps = true;
-    protected $table = 'user';
     /**
      * The attributes that should be hidden for arrays.
      *
