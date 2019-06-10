@@ -21,7 +21,7 @@ class CreateUserTable extends Migration
             //       ->onDelete('cascade');
             $table->string('fullname',30);
             $table->string('username',15)->unique();
-            $table->string('password',15);
+            $table->string('password',100);
             $table->rememberToken();
             $table->string('email', 30)->unique();
             $table->timestamp('email_verified_at')->nullable();
