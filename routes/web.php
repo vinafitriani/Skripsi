@@ -30,6 +30,7 @@ Route::get('/events', 'UserController@events_en') -> name('events');
 Route::get('/home', 'HomeController@showIndex') -> name('index');
 Route::get('/inbox', 'AuthController@showInbox') -> name('inbox');
 Route::get('/post-event', 'UserController@post_event_en') -> name('post-event');
+Route::get('/profile', 'AuthController@showProfile') -> name('profile');
 Route::get('/profile-plk', 'AuthController@showProfile') -> name('profile-plk');
 Route::get('/profile-model', 'AuthController@showProfile') -> name('profile-model');
 Route::get('/index-plk', 'AuthController@index') -> name('index-plk');
