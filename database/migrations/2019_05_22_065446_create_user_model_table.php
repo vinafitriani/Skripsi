@@ -21,7 +21,7 @@ class CreateUserModelTable extends Migration
                   ->on('users')
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
-            $table->string('gender');
+            $table->string('gender',10);
             $table->integer('height');
             $table->timestamps();
         });

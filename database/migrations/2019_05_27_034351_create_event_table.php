@@ -22,7 +22,7 @@ class CreateEventTable extends Migration
             $table->string('subject',30);
             $table->string('name',15);
             $table->date('date_event');
-            $table->string('location_event');
+            $table->string('location_event',50);
             $table->longText('description');
             $table->binary('pict_event');
             $table->timestamps();

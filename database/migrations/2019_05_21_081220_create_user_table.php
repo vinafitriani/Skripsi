@@ -19,16 +19,16 @@ class CreateUserTable extends Migration
             //       ->references('id')
             //       ->on('category')
             //       ->onDelete('cascade');
-            $table->string('fullname',191);
+            $table->string('fullname',30);
             $table->string('username',15)->unique();
-            $table->string('password');
+            $table->string('password',15);
             $table->rememberToken();
-            $table->string('email', 191)->unique();
+            $table->string('email', 30)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone',15)->nullable();
-            $table->string('location');
+            $table->string('location',50);
             $table->binary('profile_pict')->nullable();
-            $table->string('category');
+            $table->string('category',20);
             $table->timestamps();
         });
     }
