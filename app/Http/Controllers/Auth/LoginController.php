@@ -25,7 +25,14 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'home';
+    protected function authenticated($user) {
+        if ($user->category == "model") {
+            return redirect('/home-model');
+        }
+        else {
+            return redirect('/home-plk');
+        }
+   }
 
     /**
      * Create a new controller instance.

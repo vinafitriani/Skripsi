@@ -23,11 +23,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/about', 'HomeController@showAbout') -> name('about');
-Route::get('/apply-event', 'UserController@apply_event_en') -> name('apply-event');
+Route::get('/apply-event', 'AuthController@apply_event') -> name('apply-event');
 Route::get('/category', 'HomeController@showCategory') -> name('category');
-Route::get('/edit-event', 'UserController@edit_event_en') -> name('edit-event');
-Route::get('/events', 'UserController@events_en') -> name('events');
+Route::get('/edit-event', 'AuthController@edit_event') -> name('edit-event');
+Route::get('/events', 'AuthController@events') -> name('events');
 Route::get('/home', 'HomeController@showIndex') -> name('index');
+Route::get('/home-model', 'AuthController@index') -> name('index-model');
+Route::get('/home-plk', 'AuthController@index') -> name('index-plk');
 Route::get('/inbox', 'AuthController@showInbox') -> name('inbox');
-Route::get('/post-event', 'UserController@post_event_en') -> name('post-event');
-Route::get('/profile', 'AuthController@showProfile') -> name('profile');
+Route::get('/post-event', 'AuthController@post_event') -> name('post-event');
+Route::get('/profile-model', 'AuthController@showProfile') -> name('profile-model');
+Route::get('/profile-plk', 'AuthController@showProfile') -> name('profile-plk');

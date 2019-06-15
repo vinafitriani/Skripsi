@@ -58,12 +58,6 @@
 													<label for="hgt">Height:</label>
 													<input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height">
 												</div>
-												<div class="form-group">
-													<label for="profile-pict">Profile picture:</label>
-													<form action="/action_page.php">
-														<input type="file" name="profile-pict" accept="image/*">
-													</form>
-												</div>
 												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
 											</form>
 										</div>

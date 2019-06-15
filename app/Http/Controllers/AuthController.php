@@ -27,12 +27,33 @@ class AuthController extends Controller
         return view('inbox');
     }
 
-    public function showProfile(){
+    public function showProfile()
+    {
         if (Auth::user()->category == "model"){
             return view('profile-model');
         }
         else {
             return view('profile-plk');
         }
+    }
+
+    public function apply_event()
+    {
+        return view('apply-event');
+    }
+    
+    public function edit_event()
+    {
+        return view('edit-event');
+    }
+
+    public function events()
+    {
+        return view('events');
+    }
+
+    public function post_event()
+    {
+        return view('post-event');
     }
 }

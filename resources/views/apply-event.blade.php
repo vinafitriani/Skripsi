@@ -17,6 +17,7 @@
 					</div>
 					<div class="card-body">
 						<h3 class="card-title">Canon - CFVD Fashion Stage</h3>
+						<a href="/profile-plk">John Stallon</a>
 						<p class="card-text">Canon - CFVD Fashion Stage merupakan lomba photoshoot yang diselenggarakan di Graha Manggala Siliwangi, Bandung, Indonesia.
 						Acara ini diselenggarakan pada hari sabtu, 11 Juni 2011 dari pukul 13.00 - 17.00 WIB. Serta pengumuman lomba akan dilaksanakan pada pukul 20.00 WIB.
 						Agar dapat mengikuti acara ini, anda harus melakukan registrasi terlebih dahulu dan administrasi pembayaran sebesar Rp 35.000,00. Setelah melakukan registrasi, anda akan langsung terdaftar sebagai peserta dan berhak mendapatkan majalah CFVD terbaru.

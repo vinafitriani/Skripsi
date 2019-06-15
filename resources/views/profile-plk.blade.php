@@ -14,7 +14,7 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item active" aria-current="page">Profile</li>
-						<li class="breadcrumb-item"><a href="/events-en">Event</a></li>
+						<li class="breadcrumb-item"><a href="/events">Event</a></li>
 					</ol>
 				</nav>
 			</div>
@@ -60,13 +60,7 @@
 												<div class="form-group">
 													<label for="loc">Location:</label>
 													<input type="text" class="form-control" id="autocomplete" placeholder="Enter location" onFocus="geolocate()" name="location">
-												</div>												
-												<div class="form-group">
-													<label for="prof-pict">Profile picture:</label>
-													<form action="/action_page.php">
-														<input type="file" name="profile-pict" accept="image/*">
-													</form>
-												</div>
+												</div>																								
 												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
 											</form>
 										</div>
