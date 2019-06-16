@@ -47,9 +47,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<a href="/profile-model-en"><img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
+						<a href="/profile-model"><img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
 						<div class="card-body">
-							<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Giselle Olivia</h5></a>
+							<a href="/profile-model"><h5 class="card-title" style="text-align:center">Giselle Olivia</h5></a>
 						</div>
 					</div>
 				</div>
@@ -58,9 +58,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<a href="/profile-model-en"><img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
+						<a href="/profile-model"><img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
 						<div class="card-body">
-							<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Anastasia Sinclair</h5></a>
+							<a href="/profile-model"><h5 class="card-title" style="text-align:center">Anastasia Sinclair</h5></a>
 						</div>
 					</div>
 				</div>
@@ -69,9 +69,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 				<div class="card-img">
-					<a href="/profile-model-en"><img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model"></a>
+					<a href="/profile-model"><img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model"></a>
 					<div class="card-body">
-						<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Natalie Kardashian</h5></a>
+						<a href="/profile-model"><h5 class="card-title" style="text-align:center">Natalie Kardashian</h5></a>
 					</div>
 				</div>
 				</div>
@@ -80,9 +80,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<a href="/profile-model-en"><img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model"></a>
+						<a href="/profile-model"><img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model"></a>
 						<div class="card-body">
-							<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Rachel Schewarzeneger</h5></a>
+							<a href="/profile-model"><h5 class="card-title" style="text-align:center">Rachel Schewarzeneger</h5></a>
 						</div>
 					</div>
 				</div>
@@ -93,9 +93,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<a href="/profile-model-en"><img src="{{ asset('images/portfolio/male1.jpg')}}" class="card-img-top" alt="model"></a>
+						<a href="/profile-model"><img src="{{ asset('images/portfolio/male1.jpg')}}" class="card-img-top" alt="model"></a>
 						<div class="card-body">
-							<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Ryan</h5></a>
+							<a href="/profile-model"><h5 class="card-title" style="text-align:center">Ryan</h5></a>
 						</div>
 					</div>
 				</div>
@@ -104,9 +104,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<a href="/profile-model-en"><img src="{{ asset('images/portfolio/male2.jpg')}}" class="card-img-top" alt="model"></a>
+						<a href="/profile-model"><img src="{{ asset('images/portfolio/male2.jpg')}}" class="card-img-top" alt="model"></a>
 						<div class="card-body">
-							<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Mario</h5></a>
+							<a href="/profile-model"><h5 class="card-title" style="text-align:center">Mario</h5></a>
 						</div>
 					</div>
 				</div>
@@ -115,9 +115,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 				<div class="card-img">
-					<a href="/profile-model-en"><img src="{{ asset('images/portfolio/male3.jpg')}}" class="card-img-top" alt="model"></a>
+					<a href="/profile-model"><img src="{{ asset('images/portfolio/male3.jpg')}}" class="card-img-top" alt="model"></a>
 					<div class="card-body">
-						<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Patrick</h5></a>
+						<a href="/profile-model"><h5 class="card-title" style="text-align:center">Patrick</h5></a>
 					</div>
 				</div>
 				</div>
@@ -126,9 +126,9 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<a href="/profile-model-en"><img src="{{ asset('images/portfolio/male4.jpg')}}" class="card-img-top" alt="model"></a>
+						<a href="/profile-model"><img src="{{ asset('images/portfolio/male4.jpg')}}" class="card-img-top" alt="model"></a>
 						<div class="card-body">
-							<a href="/profile-model-en"><h5 class="card-title" style="text-align:center">Leonard</h5></a>
+							<a href="/profile-model"><h5 class="card-title" style="text-align:center">Leonard</h5></a>
 						</div>
 					</div>
 				</div>

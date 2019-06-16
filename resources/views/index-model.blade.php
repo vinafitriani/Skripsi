@@ -40,11 +40,11 @@
 			<div class="card mb-3" style="max-width: 540px;">
 				<div class="row no-gutters">
 					<div class="col-md-4">
-						<a href="/events-en"><img src="{{ asset('images/event/event4.jpg')}}" class="card-img" alt="event"></a>
+						<a href="/apply-event"><img src="{{ asset('images/event/event4.jpg')}}" class="card-img" alt="event"></a>
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
-							<a href="/events-en"><h5 class="card-title">Canon - CFVD Fashion on Stage</h5></a>
+							<a href="/apply-event"><h5 class="card-title">Canon - CFVD Fashion on Stage</h5></a>
 							<p class="card-text" style="text-align:justify">Kompetisi foto untuk menemukan 3 pemenang terbaik yang terpilih untuk mendapatkan hadiah dengan total senilai Rp 20.000.000,00.
 									Berlokasi di Graha Manggala Siliwangi, Bandung.</p>
 							<p class="card-text"><small class="text-muted">Jun 11th, 2011</small></p>
@@ -58,11 +58,11 @@
 			<div class="card mb-3" style="max-width: 540px;">
 				<div class="row no-gutters">
 					<div class="col-md-4">
-						<a href="/events-en"><img src="{{ asset('images/event/event2.jpg')}}" class="card-img" alt="event"></a>
+						<a href="/apply-event"><img src="{{ asset('images/event/event2.jpg')}}" class="card-img" alt="event"></a>
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
-							<a href="/events-en"><h5 class="card-title">Trend Fashion 2016</h5></a>
+							<a href="/apply-event"><h5 class="card-title">Trend Fashion 2016</h5></a>
 							<p class="card-text" style="text-align:justify">Audisi untuk model fashion show dengan tema kebaya modern dan muslimah modern. Audisi diselenggarakan di Singapura dan bersifat gratis bagi beserta yang mendaftar dan memenuhi persyaratan.</p>
 							<p class="card-text"><small class="text-muted">Jul 17th, 2016</small></p>
 						</div>
@@ -77,11 +77,11 @@
 			<div class="card mb-3" style="max-width: 540px;">
 				<div class="row no-gutters">
 					<div class="col-md-4">
-						<a href="/events-en"><img src="{{ asset('images/event/event1.jpg')}}" class="card-img" alt="event"></a>
+						<a href="/apply-event"><img src="{{ asset('images/event/event1.jpg')}}" class="card-img" alt="event"></a>
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
-							<a href="/events-en"><h5 class="card-title">Mr & Miss Youth Asia 2017</h5></a>
+							<a href="/apply-event"><h5 class="card-title">Mr & Miss Youth Asia 2017</h5></a>
 							<p class="card-text" style="text-align:justify">Audisi pemilihan Mr & Mrs Youth Asia yang diselenggarakan pada 7 hingga 8 januari 2017.</p>
 							<p class="card-text"><small class="text-muted">Jan 07th, 2017</small></p>
 						</div>
@@ -94,11 +94,11 @@
 			<div class="card mb-3" style="max-width: 540px;">
 				<div class="row no-gutters">
 					<div class="col-md-4">
-						<a href="/events-en"><img src="{{ asset('images/event/event3.jpg')}}" class="card-img" alt="event"></a>
+						<a href="/apply-event"><img src="{{ asset('images/event/event3.jpg')}}" class="card-img" alt="event"></a>
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
-							<a href="/events-en"><h5 class="card-title">JFP Model Contest 2018</h5></a>
+							<a href="/apply-event"><h5 class="card-title">JFP Model Contest 2018</h5></a>
 							<p class="card-text" style="text-align:justify">Lomba fashion show dengan tema pakaian casual.</p>
 							<p class="card-text"><small class="text-muted">Feb 17th, 2018</small></p>
 						</div>

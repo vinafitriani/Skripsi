@@ -13,7 +13,7 @@
 		<div class="well well-lg">
 			<small class="text-muted">Jun 11th, 2019</small>
             <p>You have a message from :</p>
-			<h5><a href="/profile-plk-en">James Stallon</h5></a>
+			<h5><a href="/profile-plk">James Stallon</h5></a>
             <h5>Canon - CFVD Fashion on Stage</h5>
 			<div class="media">		
 				<div class="media-body">
@@ -28,7 +28,7 @@
 		<div class="well well-lg">
 			<small class="text-muted">Jul 17th, 2019</small>
             <p>You have a message from :</p>
-			<h5><a href="/profile-plk-en">Radith Permana</h5></a>
+			<h5><a href="/profile-plk">Radith Permana</h5></a>
             <h5>Trend Fashion 2016</h5>
 			<div class="media">	
 				<div class="media-body">
@@ -43,7 +43,7 @@
 		<div class="well well-lg">
 			<small class="text-muted">Jan 07th, 2019</small>
             <p>You have a message from :</p>
-			<h5><a href="/profile-plk-en">Satria Rushdi</h5></a>
+			<h5><a href="/profile-plk">Satria Rushdi</h5></a>
 			<div class="media">		
 				<div class="media-body">
 					<p style="text-align:justify; color:brown">Do you wanna be my model?</p>                   
@@ -66,7 +66,7 @@
 		<div class="well well-lg">
 			<small class="text-muted">Feb 17th, 2019</small>
             <p>You have a message from :</p>
-			<h5><a href="/profile-plk-en">Ratna Indriani</h5></a>
+			<h5><a href="/profile-plk">Ratna Indriani</h5></a>
             <h5>JFP Model Contest 2018</h5>
 			<div class="media">	
 				<div class="media-body">
@@ -89,7 +89,7 @@
 	<div class="container"> 		 
 		<div class="well well-lg">
             <p>You have a message from :</p>
-			<h5><a href="/profile-model-en">Jimmy</h5></a>
+			<h5><a href="/profile-model">Jimmy</h5></a>
 			<div class="media">		
 				<div class="media-body">
 					<p style="text-align:justify; color:brown">I accepted to be your model. Please contact me using this phone number 081320910304. Thank you!</p>
@@ -103,7 +103,7 @@
 	<div class="container"> 		
 		<div class="well well-lg">
             <p>You have a message from :</p>
-			<h5><a href="/profile-model-en">Cindy</h5></a>
+			<h5><a href="/profile-model">Cindy</h5></a>
 			<div class="media">	
 				<div class="media-body">
 					<p style="text-align:justify; color:brown">I'm sorry i can't accepted to be your model yet. But i'm so pleased to wait for another opportunity from you.Thank you!</p>
