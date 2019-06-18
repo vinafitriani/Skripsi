@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\PictModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,7 +29,7 @@ class AuthController extends Controller
         return view('inbox');
     }
 
-    public function showProfile()
+    /*public function showProfile()
     {
         if (Auth::user()->category == "model"){
             return view('profile-model');
@@ -35,6 +37,20 @@ class AuthController extends Controller
         else {
             return view('profile-plk');
         }
+    }*/
+
+    public function profile_model()
+    {
+        $user = User::all();
+        $pict = PictModel::all();
+        $data = [ 'user' => $user, 'pictModel' => $pict ];
+        return view('profile-model', $data) ;
+    }
+
+    public function profile_plk()
+    {
+        $user = User::all();
+        return view('profile-plk');
     }
 
     public function apply_event()

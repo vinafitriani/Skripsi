@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\UserModel;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,12 +30,14 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected function authenticated($user) {
-        if ($user->category == "model") {
-            return redirect('/home-model');
+    public function redirectTo() {
+        $role = Auth::user()->category;
+
+        if ($role == "model") {
+            return '/home-model';
         }
         else {
-            return redirect('/home-plk');
+            return '/home-plk';
         }
    }
 
@@ -57,9 +60,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'fullname' => ['required', 'string', 'max:191'],
+            'fullname' => ['required', 'string', 'max:30'],
             'username' => ['required', 'string', 'max:15', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'max:191', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:30', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
         ]);
     }
@@ -82,6 +85,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'location' => $data['location'],
             'category' => $data['category'],
+            'type' => User::DEFAULT_TYPE,
         ]);
 
         $id = User::where('username', $data['username'])->first();

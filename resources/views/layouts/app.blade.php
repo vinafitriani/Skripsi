@@ -42,7 +42,7 @@
 
 @guest
 <div class="topnav">
-	<a class="@if ( Route::current()->getName() == 'index' )active @endif" href="{{ route('index') }}">{{ trans('sentence.home') }}</a>
+	<a class="@if ( Route::current()->getName() == 'base' )active @endif" href="/">{{ trans('sentence.home') }}</a>
 	<a class="@if ( Route::current()->getName() == 'category' )active @endif" href="{{ route('category') }}">{{ trans('sentence.category') }}</a>
 	<a class="@if ( Route::current()->getName() == 'about' )active @endif" href="{{ route('about') }}">{{ trans('sentence.about') }}</a>
 	<a class="@if ( Route::current()->getName() == 'login' )active @endif" href="{{ route('login') }}">{{ trans('sentence.login') }}</a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,12 +26,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected function authenticated($user) {
-        if ($user->category == "model") {
-            return redirect('/home-model');
+    public function redirectTo() {
+        $role = Auth::user()->category;
+
+        if ($role == "admin") {
+            return '/admin';
         }
-        else {
-            return redirect('/home-plk');
+        else if ($role == "model"){
+            return '/home-model';
+        }
+        else{
+            return '/home-plk';
         }
    }
 

@@ -32,5 +32,6 @@ Route::get('/home-model', 'AuthController@index') -> name('index-model');
 Route::get('/home-plk', 'AuthController@index') -> name('index-plk');
 Route::get('/inbox', 'AuthController@showInbox') -> name('inbox');
 Route::get('/post-event', 'AuthController@post_event') -> name('post-event');
-Route::get('/profile-model', 'AuthController@showProfile') -> name('profile-model');
-Route::get('/profile-plk', 'AuthController@showProfile') -> name('profile-plk');
+Route::get('/profile-model', 'AuthController@profile_model') -> name('profile-model');
+Route::get('/profile-plk', 'AuthController@profile_plk') -> name('profile-plk');
+Route::get('/admin', 'AdminController@admin') ->middleware('is_admin') ->name('admin');

@@ -18,9 +18,14 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            if ($guard->category == "model") {
+                return redirect('/home-model');
+            }
+            else {
+                return redirect('/home-plk');
+            }
         }
-
+ 
         return $next($request);
     }
 }

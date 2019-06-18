@@ -29,6 +29,7 @@ class CreateUserTable extends Migration
             $table->string('location',50);
             $table->binary('profile_pict')->nullable();
             $table->string('category',20);
+            $table->string('type')->default('default');
             $table->timestamps();
         });
     }

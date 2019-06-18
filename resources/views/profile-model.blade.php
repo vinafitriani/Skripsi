@@ -27,10 +27,12 @@
 									<div class="modal-content">
 								
 										<!-- Modal Header -->
+										@if ($user->id === Auth::user()->id) 
 										<div class="modal-header">
 											<h4 class="modal-title">Edit Profile</h4>
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
+										@endif
 									
 										<!-- Modal body -->
 										<div class="modal-body">
@@ -110,7 +112,7 @@
 										</tr>
 									</tbody>									
 								</table>
-								<button class="btn btn-success" type="button">recruit</a>
+								<button class="btn btn-success" type="button" style="width:100%">recruit</a>
 							</div>
 						</div>
 					</div>
