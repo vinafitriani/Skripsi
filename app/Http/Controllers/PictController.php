@@ -69,12 +69,17 @@ class PictController extends Controller
     public function update(Request $request)
     {
         $user = auth()->user();
-        $path = $request->file('photo')->getRealPath();
-        $image = file_get_contents($path);
-        $base64 = base64_encode($image);
+        request()->validate([
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
+        $imageName = $request->file('photo')->getClientOriginalName();
+
+        $request->file('photo')->move(public_path('images'), $imageName);
 
         $user->update([
-            'profile_pict' => $base64,
+            'profile_pict' => 'images/'.$imageName
         ]);
 
         return redirect()->back();

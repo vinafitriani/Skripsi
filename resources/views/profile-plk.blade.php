@@ -28,7 +28,7 @@
 				<div class="shadow p-4 mb-4 bg-white">
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
-							<img src="{{ asset ('images/pict3.jpg')}}" class="card-img-top" alt="profile picture">
+						<img src="{{  auth()->user()->profile_pict  !== null ? asset(auth()->user()->profile_pict) : asset('images/pict3.jpg')  }}" class="card-img-top" alt="profile picture">
 							<div class="card-body">
 							@if ($user->id === Auth::user()->id)
 							<!--https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
