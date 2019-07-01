@@ -18,18 +18,18 @@
         <div class="col-md-8">
             <div class="panel-group">
                 <div class="panel panel-info">
-                    <div class="panel-heading">About Vind</div>
-                        <div class="panel-body" style="text-align:justify">Vind is job searching website for fashion models, and help photographers, fashion designers, and makeup artists in finding models that fit the desired categories suach as height, gender, and even location.
-                        You can search for categories in the searching feature that will appear after logging in.
-                        Besides, Vind will help display the results of photos on the user's profile page which will be taken into consideration when choosing the right candidate.
-                        Vind also can help to facilitate someone who has the following professions :
+                    <div class="panel-heading">{{ trans('sentence.aboutvind') }}</div>
+                        <div class="panel-body" style="text-align:justify">Vind merupakan website job searching untuk model peraga busana, serta membantu photographer, fashion designer, dan makeup artist dalam menemukan model yang sesuai dengan kategori yang diinginkan berdasarkan lokasi, jenis kelamin, dan tinggi badan.
+                        Anda dapat mencari model yang diinginkan melalui fitur searching pada homepage setelah melakukan login.
+                        Selain itu, Vind menyediakan tampilan profil untuk setiap user dimana terdapat foto-foto portofolio yang dapat digunakan sebagai bahan pertimbangan dalam proses perekrutan seorang model.
+                        Vind membantu mempermudah pekerjaan bagi seseorang yang memiliki profesi sebagai berikut :
                             <ul>
                                 <li>Model</li>
                                 <li>Photographer</li>
                                 <li>Fashion Designer</li>
                                 <li>Makeup Artist</li>
                             </ul>	
-                            <a href="/category" class="btn btn-info" role="button" style="width:100%">Learn more</a>
+                            <a href="/about" class="btn btn-info" role="button" style="width:100%">{{ trans('sentence.learnmore') }}</a>
                         </div>
                     </div>
                 </div>
@@ -37,11 +37,11 @@
 
             <div class="col-md-4">
                 <div class="card border-info mb-3" style="max-width: 25rem;">
-                    <div class="card-header">Contact</div>
+                    <div class="card-header">{{ trans('sentence.contact') }}</div>
                     <div class="card-body text-info">
                         <h5 class="card-title" style="color:black">Email</h5>
                         <p class="card-text" style="color:green">vinanurfitriani@gmail.com</p>
-                        <h5 class="card-title" style="color:black">Phone number</h5>
+                        <h5 class="card-title" style="color:black">Nomor Telepon</h5>
                         <p class="card-text" style="color:green">081320910304</p>
                     </div>
                 </div>
@@ -74,60 +74,7 @@
                                     Berlokasi di Graha Manggala Siliwangi, Bandung.</p>
                             <p class="card-text"><small class="text-muted">Jun 11th, 2011</small></p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col order-last">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <a href="/login"><img src="{{ asset('images/event/event2.jpg')}}" class="card-img" alt="event"></a>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="/login"><h5 class="card-title">Trend Fashion 2016</h5></a>
-                            <p class="card-text" style="text-align:justify">Audisi untuk model fashion show dengan tema kebaya modern dan muslimah modern. Audisi diselenggarakan di Singapura dan bersifat gratis bagi beserta yang mendaftar dan memenuhi persyaratan.</p>
-                            <p class="card-text"><small class="text-muted">Jul 17th, 2016</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><br>
-
-    <div class="row">
-        <div class="col order-first">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <a href="/login"><img src="{{ asset('images/event/event1.jpg')}}" class="card-img" alt="event"></a>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="/login"><h5 class="card-title">Mr & Miss Youth Asia 2017</h5></a>
-                            <p class="card-text" style="text-align:justify">Audisi pemilihan Mr & Mrs Youth Asia yang diselenggarakan pada 7 hingga 8 januari 2017.</p>
-                            <p class="card-text"><small class="text-muted">Jan 07th, 2017</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col order-last">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <a href="/login"><img src="{{ asset('images/event/event3.jpg')}}" class="card-img" alt="event"></a>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="/login"><h5 class="card-title">JFP Model Contest 2018</h5></a>
-                            <p class="card-text" style="text-align:justify">Lomba fashion show dengan tema pakaian casual.</p>
-                            <p class="card-text"><small class="text-muted">Feb 17th, 2018</small></p>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -147,86 +94,7 @@
                 <div class="card-img">
                     <a href="/login"><img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
                     <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Giselle Olivia</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-                <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
-                    <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Anastasia Sinclair</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-            <div class="card-img">
-                <a href="/login"><img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model"></a>
-                <div class="card-body">
-                    <a href="/login"><h5 class="card-title" style="text-align:center">Natalie Kardashian</h5></a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-                <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model"></a>
-                    <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Rachel Schewarzeneger</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><br>
-
-    <div class="row">
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-                <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/male1.jpg')}}" class="card-img-top" alt="model"></a>
-                    <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Ryan</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-                <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/male2.jpg')}}" class="card-img-top" alt="model"></a>
-                    <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Mario</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-            <div class="card-img">
-                <a href="/login"><img src="{{ asset('images/portfolio/male3.jpg')}}" class="card-img-top" alt="model"></a>
-                <div class="card-body">
-                    <a href="/login"><h5 class="card-title" style="text-align:center">Patrick</h5></a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-                <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/male4.jpg')}}" class="card-img-top" alt="model"></a>
-                    <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Leonard</h5></a>
+                        <a href="/login"><h5 class="card-title" style="text-align:center">Vani</h5></a>
                     </div>
                 </div>
             </div>
@@ -246,17 +114,17 @@
         <div class="card-header" id="headingOne">
             <h2>
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question1" aria-expanded="true" aria-controls="collapseOne">
-                    <p style="color: blue">How can i find the right model?<p>
+                    <p style="color: blue">Bagaimana saya dapat menemukan model yang sesuai?<p>
                 </button>
             </h2>
         </div>
 
         <div id="question1" class="collapse" aria-labelledby="headingOne" data-parent="#FAQ">
             <div class="card-body">
-                You need to log in first to be able to search the model according to gender, height, and location. 
-                This searching feature will appear on the homepage when you log in as photographer, makeup artists, or fashion designers. 
-                You can use this feature to find the model correctly and quickly.
-                Besides, you can also see the profile page in each model that appears from the search results so that it can be searched further about info and portfolio.
+                Anda harus melakukan login terlebih dahulu agar dapat mencari model berdasarkan jenis kelamin, tinggi badan, dan lokasi.
+                Fitur pencarian model akan muncul pada homepage ketika anda login sebagai photographer, makeup artist, atau fashion designer.
+                Anda dapat menggunakan fitur ini untuk menemukan model secara cepat dan tepat.
+                Selain itu, anda juga dapat melihat halaman profil setiap model yang muncul dari hasil pencarian untuk mencari tau identitas dan fotoportofolio model bersangkutan.
             </div>
         </div>
     </div>
@@ -264,17 +132,17 @@
         <div class="card-header" id="headingTwo">
             <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="collapseTwo">
-                <p style="color: blue">How can i apply in available events that i want to participate?</p>
+                <p style="color: blue">Bagaimana cara mengikuti event yang akan berlangsung?</p>
                 </button>
             </h2>
         </div>
         <div id="question2" class="collapse" aria-labelledby="headingTwo" data-parent="#FAQ">
             <div class="card-body">
-                You need to log in first to be able to search for events organized by photographer, makeup artists, and fashion designers.
-                This searching feature will appear on the homepage when you log in as model. 
-                You can use this feature to find the events that you want.
-                When choosing an event that appears from the search results, a new page appears that displays detailed information about the event, you can also join the event by pressing the apply button on the same page.
-                After that, you are just waiting for info from the event organizer whether it is accepted or not.
+                Anda harus melakukan login terlebih dahulu agar dapat mencari event yang diselenggarakan oleh photographer, makeup artist, dan fashion designer.
+                Fitur pencarian event akan muncul pada homepage apabila anda login sebagai model.
+                Anda dapat memanfaatkan fitur ini untuk menemukan event yang anda inginkan sesuai lokasi yang diinginkan.
+                Anda dapat melihat info secara lengkap mengenai setiap event yang muncul dari hasil pencarian dengan mengklik judul eventnya. Jika anda tertarik untuk mengikuti event tersebut, anda dapat mengklik button daftar.
+                Setelah itu, anda tinggal menunggu pesan masuk dari penyelanggara acara tersebut melalui halaman inbox.
             </div>
         </div>
     </div>

@@ -121,17 +121,17 @@
 			<div class="card-header" id="headingOne">
 				<h2>
 					<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#question1" aria-expanded="true" aria-controls="collapseOne">
-						<p style="color: blue">How can i find the right model?<p>
+						<p style="color: blue">Bagaimana saya dapat menemukan model yang sesuai?<p>
 					</button>
 				</h2>
 			</div>
 
 			<div id="question1" class="collapse" aria-labelledby="headingOne" data-parent="#FAQ">
 				<div class="card-body">
-					You need to log in first to be able to search the model according to gender, height, and location. 
-					This searching feature will appear on the homepage when you log in as photographer, makeup artists, or fashion designers. 
-					You can use this feature to find the model correctly and quickly.
-					Besides, you can also see the profile page in each model that appears from the search results so that it can be searched further about info and portfolio.
+				Anda harus melakukan login terlebih dahulu agar dapat mencari model berdasarkan jenis kelamin, tinggi badan, dan lokasi.
+                Fitur pencarian model akan muncul pada homepage ketika anda login sebagai photographer, makeup artist, atau fashion designer.
+                Anda dapat menggunakan fitur ini untuk menemukan model secara cepat dan tepat.
+                Selain itu, anda juga dapat melihat halaman profil setiap model yang muncul dari hasil pencarian untuk mencari tau identitas dan fotoportofolio model bersangkutan.
 				</div>
 			</div>
 		</div>
@@ -139,17 +139,17 @@
 			<div class="card-header" id="headingTwo">
 					<h2 class="mb-0">
 						<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="collapseTwo">
-				<p style="color: blue">How can i apply in available events that i want to participate?</p>
+				<p style="color: blue">Bagaimana cara mengikuti event yang akan berlangsung?</p>
 						</button>
 					</h2>
 			</div>
 			<div id="question2" class="collapse" aria-labelledby="headingTwo" data-parent="#FAQ">
 					<div class="card-body">
-					You need to log in first to be able to search for events organized by photographer, makeup artists, and fashion designers.
-					This searching feature will appear on the homepage when you log in as model. 
-					You can use this feature to find the events that you want.
-					When choosing an event that appears from the search results, a new page appears that displays detailed information about the event, you can also join the event by pressing the apply button on the same page.
-					After that, you are just waiting for info from the event organizer whether it is accepted or not.
+					Anda harus melakukan login terlebih dahulu agar dapat mencari event yang diselenggarakan oleh photographer, makeup artist, dan fashion designer.
+					Fitur pencarian event akan muncul pada homepage apabila anda login sebagai model.
+					Anda dapat memanfaatkan fitur ini untuk menemukan event yang anda inginkan sesuai lokasi yang diinginkan.
+					Anda dapat melihat info secara lengkap mengenai setiap event yang muncul dari hasil pencarian dengan mengklik judul eventnya. Jika anda tertarik untuk mengikuti event tersebut, anda dapat mengklik button daftar.
+					Setelah itu, anda tinggal menunggu pesan masuk dari penyelanggara acara tersebut melalui halaman inbox.
 				</div>
 			</div>
 		</div>

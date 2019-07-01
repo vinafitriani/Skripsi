@@ -55,7 +55,7 @@
 <div class="topnav">
 	<a class="@if ( Route::current()->getName() == 'index-model' )active @endif" href="{{ route('index-model') }}">{{ trans('sentence.home') }}</a>
 	<a class="@if ( Route::current()->getName() == 'inbox' )active @endif" href="{{ route('inbox') }}">Inbox</a>
-	<a class="@if ( Route::current()->getName() == 'profile-model' )active @endif" href="{{ route('profile-model') }}">{{ trans('sentence.profile') }}</a>
+	<a class="@if ( Route::current()->getName() == 'profile-model' )active @endif" href="/profile-model/{{Auth::user()->id	}}">{{ trans('sentence.profile') }}</a>
 	<a class="@if ( Route::current()->getName() == 'category' )active @endif" href="{{ route('category') }}">{{ trans('sentence.category') }}</a>
 	<a class="@if ( Route::current()->getName() == 'about' )active @endif" href="{{ route('about') }}">{{ trans('sentence.about') }}</a>
 	<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ trans('sentence.logout') }}</a>
@@ -67,7 +67,7 @@
 <div class="topnav">
 	<a class="@if ( Route::current()->getName() == 'index-plk' )active @endif" href="{{ route('index-plk') }}">{{ trans('sentence.home') }}</a>
 	<a class="@if ( Route::current()->getName() == 'inbox' )active @endif" href="{{ route('inbox') }}">Inbox</a>
-	<a class="@if ( Route::current()->getName() == 'profile-plk' )active @endif" href="{{ route('profile-plk') }}">{{ trans('sentence.profile') }}</a>
+	<a class="@if ( Route::current()->getName() == 'profile-plk' )active @endif" href=" /profile-plk/{{Auth::user()->id}}">{{ trans('sentence.profile') }}</a>
 	<a class="@if ( Route::current()->getName() == 'category' )active @endif" href="{{ route('category') }}">{{ trans('sentence.category') }}</a>
 	<a class="@if ( Route::current()->getName() == 'about' )active @endif" href="{{ route('about') }}">{{ trans('sentence.about') }}</a>
 	<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ trans('sentence.logout') }}</a>

@@ -7,7 +7,7 @@
 @endif
 
 @section('content')
-    <h1 style="text-align:center; color:#8397b3">Inbox</h1><br>
+    <h1 style="text-align:center; color:#8397b3">{{ trans('sentence.inbox') }}</h1><br>
     <!--https://www.w3schools.com/bootstrap/bootstrap_wells.asp-->
     <div class="container"> 		 
 		<div class="well well-lg">
@@ -20,7 +20,7 @@
 					<p style="text-align:justify; color:brown">Congratulations you have accepted on this event. Please contact me using this phone number 081320910304. Thank you!</p>
 				</div>
 			</div>
-			<button class="btn btn-danger" type="button">delete</button>
+			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
 
@@ -35,7 +35,7 @@
 					<p style="text-align:justify; color:brown">Thank you for applying this event. But i'm sorry that you can't participate on this event yet. Please join on my another events, i'm so pleased that you can apply my another events.Thank you!</p>
                 </div>
 			</div>
-			<button class="btn btn-danger" type="button">Delete</button>
+			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
 
@@ -49,13 +49,13 @@
 					<p style="text-align:justify; color:brown">Do you wanna be my model?</p>                   
 				</div>
 			</div>
-			<button class="btn btn-danger" type="button">delete</button>
-            <button class="btn btn-success" type="button">accept</button>
-            <button class="btn btn-warning" type="button">decline</button>
-			<!-- if user accepted the request : muncul form input no telpon -->
+			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
+            <button class="btn btn-success" type="button">{{ trans('sentence.accept') }}</button>
+            <button class="btn btn-warning" type="button">{{ trans('sentence.decline') }}</button>
+			<!-- if user accepted the request : muncul form input no telepon -->
 			<div class="container">
 				<div class="form-group">
-					<label for="phone">Phone number:</label>
+					<label for="phone">{{ trans('sentence.phonenumber') }} :</label>
 					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonemun">
 				</div>
 			</div>
@@ -73,13 +73,13 @@
 					<p style="text-align:justify; color:brown">Do i fit the criteria for this event?</p>                   
                 </div>
 			</div>
-			<button class="btn btn-danger" type="button">Delete</button>
-            <button class="btn btn-success" type="button">accept</button>
-            <button class="btn btn-warning" type="button">decline</button>
+			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
+            <button class="btn btn-success" type="button">{{ trans('sentence.accept') }}</button>
+            <button class="btn btn-warning" type="button">{{ trans('sentence.decline') }}</button>
 			<!-- if user accepted the request : muncul form input no telpon -->
 			<div class="container">
 				<div class="form-group">
-					<label for="phone">Phone number:</label>
+					<label for="phone">{{ trans('sentence.phonenumber') }} :</label>
 					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonemun">
 				</div>
 			</div>
@@ -96,7 +96,7 @@
                     <small class="text-muted">Jun 11th, 2019</small>
 				</div>
 			</div>
-			<button class="btn btn-danger" type="button">Delete</button>
+			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
 
@@ -110,7 +110,7 @@
                     <small class="text-muted">Jul 17th, 2019</small>
                 </div>
 			</div>
-			<button class="btn btn-danger" type="button">Delete</button>
+			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
     @endsection

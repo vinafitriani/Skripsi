@@ -55,4 +55,14 @@ class User extends Authenticatable
     public function pictModel(){
         return $this->hasMany('App\PictModel');
     }
+    
+    public function userModel()
+    {
+        return $this->hasOne('App\UserModel');
+    }
+
+    public function photo()
+    {
+        return $this->pictModel()->where('category', 'profile')->latest();
+    }
 }

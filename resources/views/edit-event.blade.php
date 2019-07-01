@@ -12,27 +12,23 @@
 		<div class="shadow p-4 mb-4 bg-white">
 			<form action="/action_page.php">
 				<div class="form-group">
-					<label for="subject">Subject:</label>
+					<label for="subject">{{ trans('sentence.subject') }} :</label>
 					<input type="text" class="form-control" id="subject" placeholder="subject event" name="subject">
 				</div>
 				<div class="form-group">
-					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name" placeholder="agency/company/your name" name="name">
-				</div>
-				<div class="form-group">
-					<label for="date_event">Date:</label>
+					<label for="date_event">{{ trans('sentence.date') }} :</label>
 					<input type="date" class="form-control" id="date_event" placeholder="pick the date" name="date_event">
 				</div>
 				<div class="form-group">
-					<label for="location_event">Location:</label>
+					<label for="location_event">{{ trans('sentence.location') }} :</label>
 					<input type="text" class="form-control" id="location_event" placeholder="location that event will be held" name="location_event">
 				</div>
 				<div class="form-group">
-					<label for="description">Description:</label>
+					<label for="description">{{ trans('sentence.description') }} :</label>
 					<textarea name="description" class="form-control" id="description" cols="30" rows="5"></textarea>
 				</div>
 				<div class="form-group">
-					<label for="pict_event">Event picture:</label>&nbsp
+					<label for="pict_event">{{ trans('sentence.eventpicture') }} :</label>&nbsp
 					<form action="/action_page.php">
 						<input type="file" name="pic" accept="image/*">
 					</form>

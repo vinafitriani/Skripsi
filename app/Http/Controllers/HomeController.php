@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
+use App\User;
+use App\PictModel;
+use App\UserModel;
 
 class HomeController extends Controller
 {

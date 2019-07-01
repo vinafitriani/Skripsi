@@ -22,8 +22,8 @@
 						Acara ini diselenggarakan pada hari sabtu, 11 Juni 2011 dari pukul 13.00 - 17.00 WIB. Serta pengumuman lomba akan dilaksanakan pada pukul 20.00 WIB.
 						Agar dapat mengikuti acara ini, anda harus melakukan registrasi terlebih dahulu dan administrasi pembayaran sebesar Rp 35.000,00. Setelah melakukan registrasi, anda akan langsung terdaftar sebagai peserta dan berhak mendapatkan majalah CFVD terbaru.
 						Hasil foto terbaik akan memenangkan kamera canon dan uang tunai dengan total Rp 20.000.000,00 untuk 3 orang pemenang.</p>
-						<img src="{{ asset('images/event/event4.jpg')}}" style="object-fit:contain; width:100%; height:100%; position: center;" class="card-img" alt="event"><br><br>
-						<a href="#" class="btn btn-primary">Apply</a>
+						<img src="{{ asset('images/event/event4.jpg')}}" style="object-fit:contain; width:100%; height:50%; position: center;" class="card-img" alt="event"><br><br>
+						<a href="#" class="btn btn-primary">{{ trans('sentence.apply') }}</a>
 					</div>
 					<div class="card-footer text-muted">
 						11 Juni 2011

@@ -16,10 +16,12 @@
 						<div class="card-img">
 							<img src="{{ asset ('images/pict3.jpg')}}" class="card-img-top" alt="profile picture">
 							<div class="card-body">
+							@if ($user->id === Auth::user()->id)
 								<!--https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
 							<button type="button" style="width:100%" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 								edit profile
 							</button>
+							@endif
 
 							<!-- The Modal -->
 							<div class="modal" id="myModal">
@@ -27,38 +29,32 @@
 									<div class="modal-content">
 								
 										<!-- Modal Header -->
-										@if ($user->id === Auth::user()->id) 
 										<div class="modal-header">
-											<h4 class="modal-title">Edit Profile</h4>
+											<h4 class="modal-title">Edit Profile</h4>											
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
-										@endif
-									
+										<p>Masukkan data yang ingin anda edit saja</p>
 										<!-- Modal body -->
 										<div class="modal-body">
 											<form action="/action_page.php">
 												<div class="form-group">
-													<label for="uname">Name:</label>
-													<input type="text" class="form-control" id="uname" placeholder="Enter fullname" name="fullname">
+													<label for="uname">{{ trans('sentence.name') }} :</label>
+													<input type="text" class="form-control" id="uname" placeholder="Masukkan nama lengkap" name="fullname">
 												</div>
 												<div class="form-group">
-													<label for="mail">Email:</label>
-													<input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email">
+													<label for="loc">{{ trans('sentence.location') }} :</label>
+													<input type="text" class="form-control" id="autocomplete" placeholder="Masukkan kota tempat tinggal anda" onFocus="geolocate()" name="location">
 												</div>
 												<div class="form-group">
-													<label for="loc">Location:</label>
-													<input type="text" class="form-control" id="autocomplete" placeholder="Enter city" onFocus="geolocate()" name="location">
-												</div>
-												<div class="form-group">
-													<label for="gender">Gender:</label>
+													<label for="gender">{{ trans('sentence.gender') }} :</label>
 													<select class="custom-select" width="100%">
 														<option value="male">Male</option>
 														<option value="female">Female</option>
 													</select>
 												</div>
 												<div class="form-group">
-													<label for="hgt">Height:</label>
-													<input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height">
+													<label for="hgt">{{ trans('sentence.height') }} :</label>
+													<input type="text" class="form-control" id="hgt" placeholder="Masukkan tinggi badan(cm)" name="height">
 												</div>
 												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
 											</form>
@@ -82,37 +78,33 @@
 					<div class="panel-group" style="width: 100%;">
 						<div class="panel panel-success">
 							<div class="panel-heading">
-								Profile
+							{{ trans('sentence.profile') }}
 							</div>
 							<div class="panel-body">
-								<h3 style="text-align:center">Vina Nur Fitriani</h3>
-								<h6 style="text-align:center; color:brown">Model</h6>
+								<h3 style="text-align:center">{{ $user->fullname }}</h3>
+								<h6 style="text-align:center; color:brown">{{ $user->category }}</h6>
 								<hr>
 								<table class="table table-borderless">
 									<tbody>
 										<tr>
-											<td>Name</td>
-											<td style="color:green">Vina Nur Fitriani</td>
+											<td>{{ trans('sentence.name') }}</td>
+											<td style="color:green">{{ $user->fullname }}</td>
+										</tr>									
+										<tr>
+											<td>{{ trans('sentence.location') }}</td>
+											<td style="color:green">{{ $user->location }}</td>
 										</tr>
 										<tr>
-											<td>Email</td>
-											<td style="color:green">vinanurfitriani@gmail.com</td>
+											<td>{{ trans('sentence.gender') }}</td>
+											<td style="color:green">{{ $usermodel->gender }}</td>
 										</tr>
 										<tr>
-											<td>Location</td>
-											<td style="color:green">bandung</td>
-										</tr>
-										<tr>
-											<td>Gender</td>
-											<td style="color:green">female</td>
-										</tr>
-										<tr>
-											<td>Height</td>
-											<td style="color:green">170 cm</td>
+											<td>{{ trans('sentence.height') }}</td>
+											<td style="color:green">{{ $usermodel->height }} cm</td>
 										</tr>
 									</tbody>									
 								</table>
-								<button class="btn btn-success" type="button" style="width:100%">recruit</a>
+								<button class="btn btn-success" type="button" style="width:100%">{{ trans('sentence.recruit') }}</a>
 							</div>
 						</div>
 					</div>
@@ -127,6 +119,7 @@
   	</div>
 	</div><br>
 
+	@if ($user->id === Auth::user()->id)
 	<!-- https://getbootstrap.com/docs/4.3/components/card/ -->
 	<div class="container">
 		<div class="row">
@@ -139,6 +132,7 @@
 			</div>
 		</div>
 	</div><br><br>
+	@endif
 
 	<div class="container">
 		<div class="row">

@@ -40,7 +40,7 @@
         @endif
       </div>
       <div class="form-group">
-        <label for="mail">E-Mail:</label>
+        <label for="mail">Email:</label>
         <input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email" required autofocus>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>

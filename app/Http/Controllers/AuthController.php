@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\PictModel;
+use App\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +21,13 @@ class AuthController extends Controller
             return view('index-model');
         }
         else {
-            return view('index-plk');
+            $userList = User::where('category', 'model')->pluck('id'); 
+            /*$picture = PictModel::whereIn('user_id', $userList)->get();*/
+
+            return view('index-plk')->with([
+                'users' => User::where('category', 'model')->get(),
+                'picts' => PictModel::where('category'),
+            ]);
         }
     }
 
@@ -39,18 +46,25 @@ class AuthController extends Controller
         }
     }*/
 
-    public function profile_model()
+    public function profile_model(User $user)
     {
-        $user = User::all();
-        $pict = PictModel::all();
-        $data = [ 'user' => $user, 'pictModel' => $pict ];
-        return view('profile-model', $data) ;
+        $userModel = UserModel::where('username', $user->username)->first();
+        $pict = PictModel::find($user->id);
+        return view('profile-model')->with([
+            'user' => $user,
+            'usermodel' =>$userModel,
+            'pict' => $pict,
+        ]);
     }
 
-    public function profile_plk()
+    public function profile_plk($id)
     {
-        $user = User::all();
-        return view('profile-plk');
+            $user = User::find($id);
+            // $picts = PictModel::all();           
+            return view('profile-plk')->with([
+                'user' => $user,
+                // 'picts' => $picts,
+            ]);
     }
 
     public function apply_event()
@@ -63,13 +77,23 @@ class AuthController extends Controller
         return view('edit-event');
     }
 
-    public function events()
+    public function events($id)
     {
-        return view('events');
+        $user = User::find($id);
+        return view('events')->with([
+            'user' => $user,
+        ]);
     }
 
     public function post_event()
     {
         return view('post-event');
+    }
+
+    public function searching_model(Request $request)
+    {
+        $user = UserModel::where('gender', $request->gender)
+            ->where('height',$request->height);
+        
     }
 }

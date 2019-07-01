@@ -14,7 +14,7 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item active" aria-current="page">Profile</li>
-						<li class="breadcrumb-item"><a href="/events">Event</a></li>
+						<li class="breadcrumb-item"><a href="{{ route('events', $user) }}">Event</a></li>
 					</ol>
 				</nav>
 			</div>
@@ -30,10 +30,15 @@
 						<div class="card-img">
 							<img src="{{ asset ('images/pict3.jpg')}}" class="card-img-top" alt="profile picture">
 							<div class="card-body">
+							@if ($user->id === Auth::user()->id)
 							<!--https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
 							<button type="button" style="width:100%" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 								edit profile
+							</button><br><br>
+							<button type="button" style="width:100%" class="btn btn-success" data-toggle="modal" data-target="#modalPict">
+								change photo
 							</button>
+							@endif
 
 							<!-- The Modal -->
 							<div class="modal" id="myModal">
@@ -42,25 +47,50 @@
 									
 										<!-- Modal Header -->
 										<div class="modal-header">
-											<h4 class="modal-title">Edit Profile</h4>
+											<h4 class="modal-title">Edit Profile</h4>											
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
-										
+										<p align="center">Masukkan data yang ingin anda edit saja</p>
 										<!-- Modal body -->
 										<div class="modal-body">
 											<form action="/action_page.php">
 												<div class="form-group">
-													<label for="uname">Name:</label>
-													<input type="text" class="form-control" id="uname" placeholder="Enter fullname" name="fullname">
-												</div>
+													<label for="uname">{{ trans('sentence.name') }} :</label>
+													<input type="text" class="form-control" id="uname" placeholder="Masukkan nama lengkap" name="fullname">
+												</div>												
 												<div class="form-group">
-													<label for="mail">Email:</label>
-													<input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email">
-												</div>
-												<div class="form-group">
-													<label for="loc">Location:</label>
-													<input type="text" class="form-control" id="autocomplete" placeholder="Enter location" onFocus="geolocate()" name="location">
+													<label for="loc">{{ trans('sentence.location') }} :</label>
+													<input type="text" class="form-control" id="autocomplete" placeholder="Masukkan kota tempat tinggal anda" onFocus="geolocate()" name="location">
 												</div>																								
+												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+											</form>
+										</div>
+										
+										<!-- Modal footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+										</div>									
+									</div>
+								</div>
+							</div>
+							
+							<div class="modal" id="modalPict">
+								<div class="modal-dialog">
+									<div class="modal-content">
+									
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Change Photo</h4>											
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<form action="{{ route('pict.update')}}" method="post" enctype="multipart/form-data">
+											@csrf
+												<div class="form-group">
+													<input type="file" class="form-control" id="uname"  name="photo">
+												</div>																																				
 												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
 											</form>
 										</div>
@@ -83,25 +113,21 @@
 						<div class="panel-group" style="width: 100%;">
 							<div class="panel panel-success">
 								<div class="panel-heading">
-									Profile
+								{{ trans('sentence.profile') }}
 								</div>
 								<div class="panel-body">
-									<h3 style="text-align:center">Vina Nur Fitriani</h3>
-									<h6 style="text-align:center; color:brown">Fashion Designer</h6>
+									<h3 style="text-align:center">{{ $user->fullname }}</h3>
+									<h6 style="text-align:center; color:brown">{{ $user->category }}</h6>
 									<hr>
 									<table class="table table-borderless">
 										<tbody>
 											<tr>
-												<td>Name</td>
-												<td style="color:green">Vina Nur Fitriani</td>
+												<td>{{ trans('sentence.name') }}</td>
+												<td style="color:green">{{ $user->fullname }}</td>
 											</tr>
 											<tr>
-												<td>Email</td>
-												<td style="color:green">vinanurfitriani@gmail.com</td>
-											</tr>
-											<tr>
-												<td>Location</td>
-												<td style="color:green">bandung</td>
+												<td>{{ trans('sentence.location') }}</td>
+												<td style="color:green">{{ $user->location }}</td>
 											</tr>
 										</tbody>
 									</table>
@@ -138,7 +164,7 @@
 			<div class="col-sm">
 				<div class="card" style="width: 15rem;">
 					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model">
+						<img src="{{  auth()->user()->profile_pict ?? asset('images/portfolio/model1.jpg') }}" class="card-img-top" alt="model">
 						<div class="card-body">
 						<small class="text-muted">march 13, 2019</small>
 						</div>
