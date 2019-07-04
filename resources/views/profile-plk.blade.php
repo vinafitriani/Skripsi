@@ -14,7 +14,7 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item active" aria-current="page">Profile</li>
-						<li class="breadcrumb-item"><a href="{{ route('events', $user) }}">Event</a></li>
+						<li class="breadcrumb-item"><a href="{{ route('review', $user) }}">Review</a></li>
 					</ol>
 				</nav>
 			</div>
@@ -147,112 +147,34 @@
 	</div><br>
 
 	<!-- https://getbootstrap.com/docs/4.3/components/card/ -->
-	<div class="container">
-		<div class="row">
-			<div class="col-auto">
-				<div class="file btn button-lg" style="width:1110px">
-					<p style="float:left">Upload Portfolio : &nbsp
-					<input type="file" name="file"/></p>
-					<button type="button" class="btn btn-outline-info" style="float:right">Submit</button>
-				</div><br>
-			</div>
-		</div>
-	</div><br><br>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{  auth()->user()->profile_pict ?? asset('images/portfolio/model1.jpg') }}" class="card-img-top" alt="model">
-						<div class="card-body">
-						<small class="text-muted">march 13, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model">
-						<div class="card-body">
-						<small class="text-muted">march 12, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model">
-						<div class="card-body">
-							<small class="text-muted">march 11, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model">
-						<div class="card-body">
-						<small class="text-muted">march 10, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><br>
-
+	@if ($user->id === Auth::user()->id)
+	<form action="{{ route('portfolio.update')}}" method="post" enctype="multipart/form-data">
+	@csrf
+		<div class="container">
 			<div class="row">
-				<div class="col-sm">
-					<div class="card" style="width: 15rem;">
-						<div class="card-img">
-							<img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model">
-							<div class="card-body">
-								<small class="text-muted">march 9, 2019</small>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm">
-					<div class="card" style="width: 15rem;">
-						<div class="card-img">
-							<img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model">
-							<div class="card-body">
-								<small class="text-muted">march 8, 2019</small>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm">
-					<div class="card" style="width: 15rem;">
-						<div class="card-img">
-							<img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model">
-							<div class="card-body">
-								<small class="text-muted">march 7, 2019</small>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm">
-					<div class="card" style="width: 15rem;">
-						<div class="card-img">
-							<img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model">
-							<div class="card-body">
-							<small class="text-muted">march 6, 2019</small>
-							</div>
-						</div>
-					</div>
+				<div class="col-auto">
+					<div class="file btn button-lg" style="width:1110px">
+						<p style="float:left">Upload Portfolio : &nbsp
+						<input type="file" name="file"/></p>
+						<button type="submit" class="btn btn-outline-info" style="float:right">Submit</button>
+					</div><br>
 				</div>
 			</div>
+		</div><br><br>
+	</form>
+	@endif
+
+	<div class="container">
+		<div class="row">
+			<ul class="list-group">
+				@foreach $picts as $pict
+				<li class="list-group-item">
+					<img src="{{ $pict }}" class="card-img-top" alt="model">
+				</li>
+				@endforeach
+			</ul>
 		</div>
-	</div><br>
+	</div>
 	@endsection						
 	
 	<script>

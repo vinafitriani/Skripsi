@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required autofocus>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" maxlength="8" required autofocus>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
         @if ($errors->has('password'))
@@ -41,7 +41,7 @@
       </div>
       <div class="form-group">
         <label for="mail">Email:</label>
-        <input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email" required autofocus>
+        <input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email" maxlength="30" required autofocus>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
         @if ($errors->has('email'))
@@ -50,7 +50,7 @@
       </div>
       <div class="form-group">
         <label for="loc">{{ trans('sentence.location') }}:</label>
-        <input type="text" class="form-control" id="autocomplete" placeholder="Enter location" name="location" onFocus="geolocate()" required>
+        <input type="text" class="form-control" id="autocomplete" placeholder="Enter location" name="location" onFocus="geolocate()" maxlength="50" required>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
       </div>

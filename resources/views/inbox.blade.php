@@ -11,13 +11,11 @@
     <!--https://www.w3schools.com/bootstrap/bootstrap_wells.asp-->
     <div class="container"> 		 
 		<div class="well well-lg">
-			<small class="text-muted">Jun 11th, 2019</small>
-            <p>You have a message from :</p>
+            <p>Anda mendapat pesan dari :</p>
 			<h5><a href="/profile-plk">James Stallon</h5></a>
-            <h5>Canon - CFVD Fashion on Stage</h5>
 			<div class="media">		
 				<div class="media-body">
-					<p style="text-align:justify; color:brown">Congratulations you have accepted on this event. Please contact me using this phone number 081320910304. Thank you!</p>
+					<p style="text-align:justify; color:brown">Selamat anda diterima untuk suatu pekerjaan. Silahkan hubungi saya melalui nomor telepon ini 081320910304. Terima kasih!</p>
 				</div>
 			</div>
 			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
@@ -26,13 +24,11 @@
 
     <div class="container"> 		
 		<div class="well well-lg">
-			<small class="text-muted">Jul 17th, 2019</small>
-            <p>You have a message from :</p>
+            <p>Anda mendapat pesan dari :</p>
 			<h5><a href="/profile-plk">Radith Permana</h5></a>
-            <h5>Trend Fashion 2016</h5>
 			<div class="media">	
 				<div class="media-body">
-					<p style="text-align:justify; color:brown">Thank you for applying this event. But i'm sorry that you can't participate on this event yet. Please join on my another events, i'm so pleased that you can apply my another events.Thank you!</p>
+					<p style="text-align:justify; color:brown">Terima kasih telah mengajukan kerja sama pekerjaan dengan saya. Namun saya meminta maaf karena anda belum bisa ikut serta pada project saya saat ini. Disisi lain, saya mengharapkan anda untuk mengajukan kerja sama pekerjaan dengan saya di lain waktu.Terima kasih!</p>
                 </div>
 			</div>
 			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
@@ -41,12 +37,11 @@
 
     <div class="container"> 		 
 		<div class="well well-lg">
-			<small class="text-muted">Jan 07th, 2019</small>
-            <p>You have a message from :</p>
+            <p>Anda mendapat pesan dari :</p>
 			<h5><a href="/profile-plk">Satria Rushdi</h5></a>
 			<div class="media">		
 				<div class="media-body">
-					<p style="text-align:justify; color:brown">Do you wanna be my model?</p>                   
+					<p style="text-align:justify; color:brown">Apakah anda tertarik untuk menjadi model saya?</p>                   
 				</div>
 			</div>
 			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
@@ -56,7 +51,7 @@
 			<div class="container">
 				<div class="form-group">
 					<label for="phone">{{ trans('sentence.phonenumber') }} :</label>
-					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonemun">
+					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonenum">
 				</div>
 			</div>
 		</div>
@@ -64,13 +59,11 @@
 
     <div class="container"> 		
 		<div class="well well-lg">
-			<small class="text-muted">Feb 17th, 2019</small>
-            <p>You have a message from :</p>
+            <p>Anda mendapat pesan dari :</p>
 			<h5><a href="/profile-plk">Ratna Indriani</h5></a>
-            <h5>JFP Model Contest 2018</h5>
 			<div class="media">	
 				<div class="media-body">
-					<p style="text-align:justify; color:brown">Do i fit the criteria for this event?</p>                   
+					<p style="text-align:justify; color:brown">Apakah ada pekerjaan yang sesuai dengan kriteria saya?</p>                   
                 </div>
 			</div>
 			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
@@ -80,7 +73,7 @@
 			<div class="container">
 				<div class="form-group">
 					<label for="phone">{{ trans('sentence.phonenumber') }} :</label>
-					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonemun">
+					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonenum">
 				</div>
 			</div>
 		</div>
@@ -88,11 +81,11 @@
 
 	<div class="container"> 		 
 		<div class="well well-lg">
-            <p>You have a message from :</p>
+            <p>Anda mendapat pesan dari :</p>
 			<h5><a href="/profile-model">Jimmy</h5></a>
 			<div class="media">		
 				<div class="media-body">
-					<p style="text-align:justify; color:brown">I accepted to be your model. Please contact me using this phone number 081320910304. Thank you!</p>
+					<p style="text-align:justify; color:brown">Saya menerima tawaran anda. Silahkan hubungi saya melalui nomor telepon ini 081320910304. Terima kasih!</p>
                     <small class="text-muted">Jun 11th, 2019</small>
 				</div>
 			</div>
@@ -102,11 +95,11 @@
 
 	<div class="container"> 		
 		<div class="well well-lg">
-            <p>You have a message from :</p>
+            <p>Anda mendapat pesan dari :</p>
 			<h5><a href="/profile-model">Cindy</h5></a>
 			<div class="media">	
 				<div class="media-body">
-					<p style="text-align:justify; color:brown">I'm sorry i can't accepted to be your model yet. But i'm so pleased to wait for another opportunity from you.Thank you!</p>
+					<p style="text-align:justify; color:brown">Terima kasih atas tawaran anda. Namun saya belum bisa bekerja sama menjadi model anda untuk saat ini. Thank you!</p>
                     <small class="text-muted">Jul 17th, 2019</small>
                 </div>
 			</div>

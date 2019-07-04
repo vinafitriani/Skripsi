@@ -14,13 +14,13 @@
     @csrf
       <div class="form-group">
         <label for="uname">Username:</label>
-        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="username" required>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="username" maxlength="15" required>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
       </div>
       <div class="form-group">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" maxlength="8" required>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
       </div>

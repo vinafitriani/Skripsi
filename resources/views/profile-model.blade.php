@@ -14,12 +14,15 @@
 				<div class="shadow p-4 mb-4 bg-white">
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
-							<img src="{{ auth()->user()->profile_pict ?? asset('images/pict3.jpg') }}" class="card-img-top" alt="profile picture">
+						<img src="{{  auth()->user()->profile_pict  !== null ? asset(auth()->user()->profile_pict) : asset('images/pict3.jpg')  }}" class="card-img-top" alt="profile picture">
 							<div class="card-body">
 							@if ($user->id === Auth::user()->id)
 								<!--https://www.w3schools.com/bondotstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
 							<button type="button" style="width:100%" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 								edit profile
+							</button><br><br>
+							<button type="button" style="width:100%" class="btn btn-success" data-toggle="modal" data-target="#modalPict">
+								change photo
 							</button>
 							@endif
 
@@ -60,6 +63,34 @@
 											</form>
 										</div>
 									
+										<!-- Modal footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+										</div>									
+									</div>
+								</div>
+							</div>
+							<div class="modal" id="modalPict">
+								<div class="modal-dialog">
+									<div class="modal-content">
+									
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Change Photo</h4>											
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<form action="{{ route('pict.update')}}" method="post" enctype="multipart/form-data">
+											@csrf
+												<div class="form-group">
+													<input type="file" class="form-control" id="uname"  name="photo">
+												</div>																																				
+												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+											</form>
+										</div>
+										
 										<!-- Modal footer -->
 										<div class="modal-footer">
 											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -136,95 +167,14 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-						<small class="text-muted">march 13, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-						<small class="text-muted">march 12, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-				<div class="card-img">
-					<img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model"></a>
-					<div class="card-body">
-					<small class="text-muted">march 11, 2019</small>
-					</div>
-				</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-						<small class="text-muted">march 10, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><br>
-
-		<div class="row">
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-						<small class="text-muted">march 9, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-						<small class="text-muted">march 8, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-				<div class="card-img">
-					<img src="{{ asset('images/portfolio/model3.jpg')}}" class="card-img-top" alt="model"></a>
-					<div class="card-body">
-					<small class="text-muted">march 7, 2019</small>
-					</div>
-				</div>
-				</div>
-			</div>
-
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<img src="{{ asset('images/portfolio/model4.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-						<small class="text-muted">march 6, 2019</small>
-						</div>
-					</div>
-				</div>
-			</div>
+			<ul class="list-group">
+			{{ dd($picts) }}
+				@foreach $picts as $pict
+				<li class="list-group-item">
+					<img src="{{ $pict }}" class="card-img-top" alt="model">
+				</li>
+				@endforeach
+			</ul>
 		</div>
 	</div>
 	@endsection						

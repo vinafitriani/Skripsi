@@ -53,7 +53,7 @@
 <!--Photo by Johny Goerend on Unsplash-->
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron1.jpg')}}');">
 <div class="container">
-    <h2 align="center">Events</h2>
+    <h2 align="center">The Recruiters</h2>
 </div>
 </div><br>
 
@@ -61,20 +61,14 @@
     https://getbootstrap.com/docs/4.3/layout/grid/ -->
 <div class="container">
     <div class="row">
-        <div class="col order-first">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <a href="/login"><img src="{{ asset('images/event/event4.jpg')}}" class="card-img" alt="event"></a>
+        <div class="col-sm">
+            <div class="card" style="width: 15rem;">
+                <div class="card-img">
+                    <a href="/login"><img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
+                    <div class="card-body">
+                        <a href="/login"><h5 class="card-title" style="text-align:center">Vine</h5></a>
+                        <p class="text-muted" align="center">Photographer</p>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="/login"><h5 class="card-title">Canon - CFVD Fashion on Stage</h5></a>
-                            <p class="card-text" style="text-align:justify">Kompetisi foto untuk menemukan 3 pemenang terbaik yang terpilih untuk mendapatkan hadiah dengan total senilai Rp 20.000.000,00.
-                                    Berlokasi di Graha Manggala Siliwangi, Bandung.</p>
-                            <p class="card-text"><small class="text-muted">Jun 11th, 2011</small></p>
-                        </div>
-                    </div> 
                 </div>
             </div>
         </div>
@@ -83,7 +77,7 @@
 
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron.jpg')}}');">
 <div class="container">
-    <h2 style="text-align:center; color:white">Models</h2>
+    <h2 style="text-align:center; color:white">The Models</h2>
 </div>
 </div><br>
 
@@ -129,23 +123,24 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="collapseTwo">
-                <p style="color: blue">Bagaimana cara mengikuti event yang akan berlangsung?</p>
-                </button>
-            </h2>
-        </div>
-        <div id="question2" class="collapse" aria-labelledby="headingTwo" data-parent="#FAQ">
-            <div class="card-body">
-                Anda harus melakukan login terlebih dahulu agar dapat mencari event yang diselenggarakan oleh photographer, makeup artist, dan fashion designer.
-                Fitur pencarian event akan muncul pada homepage apabila anda login sebagai model.
-                Anda dapat memanfaatkan fitur ini untuk menemukan event yang anda inginkan sesuai lokasi yang diinginkan.
-                Anda dapat melihat info secara lengkap mengenai setiap event yang muncul dari hasil pencarian dengan mengklik judul eventnya. Jika anda tertarik untuk mengikuti event tersebut, anda dapat mengklik button daftar.
-                Setelah itu, anda tinggal menunggu pesan masuk dari penyelanggara acara tersebut melalui halaman inbox.
-            </div>
-        </div>
-    </div>
+			<div class="card-header" id="headingTwo">
+					<h2 class="mb-0">
+						<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="collapseTwo">
+				<p style="color: blue">Bagaimana cara mengajukan kerja sama pekerjaan pada perekrut?</p>
+						</button>
+					</h2>
+			</div>
+			<div id="question2" class="collapse" aria-labelledby="headingTwo" data-parent="#FAQ">
+					<div class="card-body">
+					Anda harus melakukan login terlebih dahulu agar dapat mengajukan kerja sama pekerjaan pada perekrut.
+					Fitur pencarian perekrut akan muncul pada homepage ketika anda login sebagai model.
+					Anda dapat menggunakan fitur ini untuk mengajukan kerja sama pekerjaan pada perekrut secara cepat.
+					Selain itu, anda juga dapat melihat halaman profil setiap perekrut yang muncul dari hasil pencarian untuk mencari tau identitas dan foto portfolio model bersangkutan.
+					Apabila anda tertarik, maka anda dapat menekan button ask for job.
+					Setelah itu, anda tinggal menunggu pesan masuk dari perekrut tersebut melalui halaman inbox.
+				</div>
+			</div>
+		</div>
 </div><br><br>
 @endsection
 

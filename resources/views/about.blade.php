@@ -14,11 +14,11 @@
 			</div>
 			<div class="col-md-4"><br>
 				<h2>{{ trans('sentence.aboutvind') }}</h2>
-				<p align="justify">Vind merupakan website job searching untuk model peraga busana, serta membantu photographer, fashion designer, dan makeup artist dalam menemukan model yang sesuai dengan kategori yang diinginkan berdasarkan lokasi, jenis kelamin, dan tinggi badan.
-                        Anda dapat mencari model yang diinginkan melalui fitur searching pada homepage setelah melakukan login.
-                        Selain itu, Vind menyediakan tampilan profil untuk setiap user dimana terdapat foto-foto portofolio yang dapat digunakan sebagai bahan pertimbangan dalam proses perekrutan seorang model.</p>
-				<p align="justify">User yang telah melakukan login sebagai photographer, makeup artist, atau fashion designer dapat mempublikasikan event dengan memasukkan detail acara pada halaman post event yang terdapat pada halaman profil.
-								Model yang ikut serta pada event yang bersangkutan akan muncul pada pesan masuk penyelenggara event tersebut, dimana penyelenggara berhak untuk menerima maupun menolak model yang telah mendaftar dengan mengklik button terima atau tolak di bawah pesan tersebut.
+				<p align="justify">Vind merupakan <i>website job searching</i> untuk model peraga busana, serta membantu <i>photographer, fashion designer,</i> dan <i>makeup artist</i> dalam menemukan model yang sesuai dengan kategori yang diinginkan berdasarkan lokasi, jenis kelamin, dan tinggi badan.
+                        Anda dapat mencari model yang diinginkan melalui fitur pencarian pada <i>homepage</i> setelah melakukan <i>login</i>.
+                        Selain itu, Vind menyediakan tampilan profil untuk setiap <i>user</i> dimana terdapat foto-foto portfolio yang dapat digunakan sebagai bahan pertimbangan dalam proses perekrutan seorang model.</p>
+				<p align="justify">User yang telah melakukan <i>login</i> sebagai <i>photographer, makeup artist,</i> atau <i>fashion designer</i> dapat merekrut model dengan mengklik <i>button</i> recruit pada halaman profil <i>user</i> model.
+								Namun, apabila anda melakukan <i>login</i> sebagai model maka anda dapat melakukan pengajuan kerja sama pekerjaan kepada perekrut dengan mengklik <i>button</i> ask for job pada halaman profil <i>user</i> perekrut.
 				<p align="justify">Vind membantu mempermudah pekerjaan bagi seseorang yang memiliki profesi sebagai berikut :</p>
 				<ul>
 					<li>Model</li>

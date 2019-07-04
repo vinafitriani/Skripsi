@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\PictModel;
+use App\Pict;
 use App\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,7 @@ class AuthController extends Controller
             return view('index-model');
         }
         else {
-            $userList = User::where('category', 'model')->pluck('id'); 
+            $userList = User::where('category', 'model')->pluck('id');
             /*$picture = PictModel::whereIn('user_id', $userList)->get();*/
 
             return view('index-plk')->with([
@@ -50,6 +51,7 @@ class AuthController extends Controller
     {
         $userModel = UserModel::where('username', $user->username)->first();
         $pict = PictModel::find($user->id);
+        
         return view('profile-model')->with([
             'user' => $user,
             'usermodel' =>$userModel,
@@ -60,34 +62,26 @@ class AuthController extends Controller
     public function profile_plk($id)
     {
             $user = User::find($id);
-            // $picts = PictModel::all();           
+            $picts = PictModel::where("id", $id)->get();
+        
             return view('profile-plk')->with([
                 'user' => $user,
-                // 'picts' => $picts,
+                'picts' => $picts,
             ]);
     }
 
-    public function apply_event()
-    {
-        return view('apply-event');
-    }
-    
-    public function edit_event()
-    {
-        return view('edit-event');
+    public function upload_portfolio(Request $request){
+        // dd($request->all());
+        $pict = Pict::store($request->file('file'), '/');
+        return redirect()->route('profile', [$pict]);
     }
 
-    public function events($id)
+    public function showReview($id)
     {
         $user = User::find($id);
-        return view('events')->with([
+        return view('review')->with([
             'user' => $user,
         ]);
-    }
-
-    public function post_event()
-    {
-        return view('post-event');
     }
 
     public function searching_model(Request $request)

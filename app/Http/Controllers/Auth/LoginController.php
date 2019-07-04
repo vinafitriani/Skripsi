@@ -29,10 +29,7 @@ class LoginController extends Controller
     public function redirectTo() {
         $role = Auth::user()->category;
 
-        if ($role == "admin") {
-            return '/admin';
-        }
-        else if ($role == "model"){
+        if ($role == "model"){
             return '/home-model';
         }
         else{

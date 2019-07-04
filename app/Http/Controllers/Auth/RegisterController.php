@@ -85,7 +85,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'location' => $data['location'],
             'category' => $data['category'],
-            'type' => User::DEFAULT_TYPE,
         ]);
 
         $id = User::where('username', $data['username'])->first();

@@ -87,23 +87,24 @@
 			</div>
   		</div>
   		<div class="card">
-    		<div class="card-header" id="headingTwo">
-      			<h2 class="mb-0">
-        			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="collapseTwo">
-					<p style="color: blue">Bagaimana cara mengikuti event yang akan berlangsung?</p>
-        			</button>
-      			</h2>
-    		</div>
-    		<div id="question2" class="collapse" aria-labelledby="headingTwo" data-parent="#FAQ">
-      			<div class="card-body">
-				  Anda harus melakukan login terlebih dahulu agar dapat mencari event yang diselenggarakan oleh photographer, makeup artist, dan fashion designer.
-                Fitur pencarian event akan muncul pada homepage apabila anda login sebagai model.
-                Anda dapat memanfaatkan fitur ini untuk menemukan event yang anda inginkan sesuai lokasi yang diinginkan.
-                Anda dapat melihat info secara lengkap mengenai setiap event yang muncul dari hasil pencarian dengan mengklik judul eventnya. Jika anda tertarik untuk mengikuti event tersebut, anda dapat mengklik button daftar.
-                Setelah itu, anda tinggal menunggu pesan masuk dari penyelanggara acara tersebut melalui halaman inbox.
+			<div class="card-header" id="headingTwo">
+					<h2 class="mb-0">
+						<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="collapseTwo">
+				<p style="color: blue">Bagaimana cara mengajukan kerja sama pekerjaan pada perekrut?</p>
+						</button>
+					</h2>
+			</div>
+			<div id="question2" class="collapse" aria-labelledby="headingTwo" data-parent="#FAQ">
+					<div class="card-body">
+					Anda harus melakukan login terlebih dahulu agar dapat mengajukan kerja sama pekerjaan pada perekrut.
+					Fitur pencarian perekrut akan muncul pada homepage ketika anda login sebagai model.
+					Anda dapat menggunakan fitur ini untuk mengajukan kerja sama pekerjaan pada perekrut secara cepat.
+					Selain itu, anda juga dapat melihat halaman profil setiap perekrut yang muncul dari hasil pencarian untuk mencari tau identitas dan foto portfolio model bersangkutan.
+					Apabila anda tertarik, maka anda dapat menekan button ask for job.
+					Setelah itu, anda tinggal menunggu pesan masuk dari perekrut tersebut melalui halaman inbox.
 				</div>
 			</div>
-  		</div>
+		</div>
 	</div><br><br>
 	@endsection
 		
