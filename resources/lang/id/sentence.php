@@ -35,4 +35,5 @@ return [
     'subject' => 'Judul Acara',
     'usercategory' => 'Kategori Pengguna',
     'validfeedback' => 'Sesuai',
+    'writesomething' => 'Tulis ulasan disini',
 ];

@@ -35,4 +35,5 @@ return [
   'subject' => 'Subject',
   'usercategory' => 'User Category',
   'validfeedback' => 'Valid',
+  'writesomething' => 'Write something here',
 ];

@@ -28,7 +28,11 @@
 				<div class="shadow p-4 mb-4 bg-white">
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
-						<img src="{{  auth()->user()->profile_pict  !== null ? asset(auth()->user()->profile_pict) : asset('images/pict3.jpg')  }}" class="card-img-top" alt="profile picture">
+						@if($user->profile_pict==true)
+							<img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="profile picture">
+						@else
+							<img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="profile picture">
+						@endif
 							<div class="card-body">
 							@if ($user->id === Auth::user()->id)
 							<!--https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
@@ -131,6 +135,7 @@
 											</tr>
 										</tbody>
 									</table>
+									<button class="btn btn-success" type="submit" style="width:100%">ask for job</a>
 								</div>
 							</div>
 						</div>
@@ -148,7 +153,7 @@
 
 	<!-- https://getbootstrap.com/docs/4.3/components/card/ -->
 	@if ($user->id === Auth::user()->id)
-	<form action="{{ route('portfolio.update')}}" method="post" enctype="multipart/form-data">
+	<form action="{{ route('portfolio-plk.update')}}" method="post" enctype="multipart/form-data">
 	@csrf
 		<div class="container">
 			<div class="row">
@@ -165,16 +170,23 @@
 	@endif
 
 	<div class="container">
-		<div class="row">
-			<ul class="list-group">
-				@foreach $picts as $pict
-				<li class="list-group-item">
-					<img src="{{ $pict }}" class="card-img-top" alt="model">
-				</li>
+			<div class="row">
+					@foreach ($picts as $pict)
+				<div class="col-sm">					
+					<div class="card" style="width: 15rem;">
+						<div class="card-img">
+								<img src="{{ $pict->url }}" class="card-img-top" alt="model">
+								@if ($user->id === Auth::user()->id)								
+								<div class="card-body">
+											<button class="btn btn-danger" type="submit" style="width:100%">delete</button>								
+								</div>
+								@endif
+						</div>						
+					</div>					
+				</div>	
 				@endforeach
-			</ul>
+			</div>
 		</div>
-	</div>
 	@endsection						
 	
 	<script>

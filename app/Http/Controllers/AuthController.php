@@ -19,7 +19,12 @@ class AuthController extends Controller
     public function index()
     {
         if (Auth::user()->category == "model"){
-            return view('index-model');
+            $userList = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->pluck('id');
+
+            return view('index-model')->with([
+                'users' => User::whereIn('category', ['fashion', 'photographer', 'makeup'])->get(),
+                'picts' => PictModel::where('category'),
+            ]);
         }
         else {
             $userList = User::where('category', 'model')->pluck('id');
@@ -50,19 +55,19 @@ class AuthController extends Controller
     public function profile_model(User $user)
     {
         $userModel = UserModel::where('username', $user->username)->first();
-        $pict = PictModel::find($user->id);
-        
+        $picts = Pict::where('upload_by', $user->id)->get();
         return view('profile-model')->with([
             'user' => $user,
             'usermodel' =>$userModel,
-            'pict' => $pict,
+            'picts' => $picts,
         ]);
     }
 
     public function profile_plk($id)
     {
-            $user = User::find($id);
-            $picts = PictModel::where("id", $id)->get();
+            $user = User::findOrFail($id);
+            $picts = Pict::where('upload_by', $user->id)->get();
+            // $picts = PictModel::where("id", $id)->get();
         
             return view('profile-plk')->with([
                 'user' => $user,
@@ -70,10 +75,16 @@ class AuthController extends Controller
             ]);
     }
 
-    public function upload_portfolio(Request $request){
+    public function upload_portfolio_plk(Request $request){
         // dd($request->all());
-        $pict = Pict::store($request->file('file'), '/');
-        return redirect()->route('profile', [$pict]);
+        $pict = Pict::store($request->file('file'), 'portofolio');
+        return redirect()->route('profile-plk', [$pict->upload_by]);
+    }
+
+    public function upload_portfolio_model(Request $request){
+        // dd($request->all());
+        $pict = Pict::store($request->file('file'), 'portofolio');
+        return redirect()->route('profile-model', [$pict->upload_by]);
     }
 
     public function showReview($id)

@@ -35,4 +35,5 @@ Route::get('/profile-model/{user}', 'AuthController@profile_model') -> name('pro
 Route::get('/profile-plk/{id}', 'AuthController@profile_plk') -> name('profile-plk');
 Route::post('/searching-model', 'AuthController@searching_model')->name('searching-model');
 Route::post('/pict-update', 'PictController@update')->name('pict.update');
-Route::post('/portfolio-update', 'AuthController@upload_portfolio')->name('portfolio.update');
+Route::post('/portfolio-plk-update', 'AuthController@upload_portfolio_plk')->name('portfolio-plk.update');
+Route::post('/portfolio-model-update', 'AuthController@upload_portfolio_model')->name('portfolio-model.update');

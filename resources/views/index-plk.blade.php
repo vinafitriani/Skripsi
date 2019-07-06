@@ -44,21 +44,28 @@
 	</div><br>
 	
 	<div class="container">
-		<div class="row">
-			@foreach ($users as $user)
-			<div class="col-sm">
-				<div class="card" style="width: 15rem;">
-					<div class="card-img">
-						<a href="{{ route('profile-model', $user) }}"><img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
-						<div class="card-body">
-							<a href="{{ route('profile-model', $user) }}"><h5 class="card-title" style="text-align:center">{{ $user->fullname }}</h5></a>
+			<div class="row">
+				@foreach ($users as $user)
+				<div class="col-sm">
+					<div class="card" style="width: 15rem;">
+						<div class="card-img">
+							<a href="{{ route('profile-model', $user) }}">
+								@if($user->profile_pict==true)
+									<img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="recruiter">
+								@else
+									<img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="recruiter">
+								@endif
+							</a>
+							<div class="card-body">
+								<a href="{{ route('profile-model', $user) }}"><h5 class="card-title" style="text-align:center">{{ $user->fullname }}</h5></a>
+								<p class="text-muted" align="center">{{ $user->category }}</p>
+							</div>
 						</div>
 					</div>
 				</div>
+				@endforeach	
 			</div>
-			@endforeach	
-		</div>
-	</div><br><hr class="hr-style"><br>
+		</div><br><hr class="hr-style"><br>
 
 	<div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron2.jpg')}}');">
 	<div class="container">

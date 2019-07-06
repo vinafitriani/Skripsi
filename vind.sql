@@ -46,22 +46,6 @@ INSERT INTO `category` (`id`, `category`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event`
---
-
-CREATE TABLE `event` (
-  `username` varchar(15) NOT NULL,
-  `subject` varchar(30) NOT NULL,
-  `name` varchar(15) NOT NULL,
-  `date_event` date NOT NULL,
-  `location_event` varchar(15) NOT NULL,
-  `description` longtext NOT NULL,
-  `pict_event` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `pict`
 --
 
@@ -79,10 +63,10 @@ CREATE TABLE `pict` (
 CREATE TABLE `user` (
   `fullname` varchar(30) NOT NULL,
   `username` varchar(15) NOT NULL,
-  `password` varchar(10) NOT NULL,
+  `password` varchar(8) NOT NULL,
   `email` varchar(30) NOT NULL,
   `phone` int(15) NOT NULL,
-  `location` varchar(30) NOT NULL,
+  `location` varchar(50) NOT NULL,
   `profile-pict` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -107,12 +91,6 @@ CREATE TABLE `user_model` (
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `event`
---
-ALTER TABLE `event`
-  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `pict`

@@ -35,20 +35,28 @@
 <!-- https://getbootstrap.com/docs/4.3/components/card/
 		https://getbootstrap.com/docs/4.3/layout/grid/ -->
 		<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <div class="card" style="width: 15rem;">
-                <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/model2.jpg')}}" class="card-img-top" alt="model"></a>
-                    <div class="card-body">
-                        <a href="/login"><h5 class="card-title" style="text-align:center">Vine</h5></a>
-                        <p class="text-muted" align="center">Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><br><hr class="hr-style"><br>
+				<div class="row">
+					@foreach ($users as $user)
+					<div class="col-sm">
+						<div class="card" style="width: 15rem;">
+							<div class="card-img">
+								<a href="{{ route('profile-plk', $user) }}">
+									@if($user->profile_pict==true)
+										<img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="recruiter">
+									@else
+										<img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="recruiter">
+									@endif
+								</a>
+								<div class="card-body">
+									<a href="{{ route('profile-plk', $user) }}"><h5 class="card-title" style="text-align:center">{{ $user->fullname }}</h5></a>
+									<p class="text-muted" align="center">{{ $user->category }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					@endforeach	
+				</div>
+			</div><br><hr class="hr-style"><br>
 	
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron2.jpg')}}');">
 	<div class="container">

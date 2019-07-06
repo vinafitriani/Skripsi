@@ -1,4 +1,3 @@
-{{ dd('hahaha') }}
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 

@@ -14,7 +14,11 @@
 				<div class="shadow p-4 mb-4 bg-white">
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
-						<img src="{{  auth()->user()->profile_pict  !== null ? asset(auth()->user()->profile_pict) : asset('images/pict3.jpg')  }}" class="card-img-top" alt="profile picture">
+						@if($user->profile_pict==true)
+							<img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="profile picture">
+						@else
+							<img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="profile picture">
+						@endif
 							<div class="card-body">
 							@if ($user->id === Auth::user()->id)
 								<!--https://www.w3schools.com/bondotstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
@@ -135,7 +139,7 @@
 										</tr>
 									</tbody>									
 								</table>
-								<button class="btn btn-success" type="button" style="width:100%">{{ trans('sentence.recruit') }}</a>
+								<button class="btn btn-success" type="submit" style="width:100%">{{ trans('sentence.recruit') }}</a>
 							</div>
 						</div>
 					</div>
@@ -151,30 +155,38 @@
 	</div><br>
 
 	@if ($user->id === Auth::user()->id)
-	<!-- https://getbootstrap.com/docs/4.3/components/card/ -->
-	<div class="container">
-		<div class="row">
-			<div class="col-auto">
-				<div class="file btn button-lg" style="width:1110px">
-					<p style="float:left">Upload Portfolio : &nbsp
-					<input type="file" name="file"/></p>
-					<button type="button" class="btn btn-outline-info" style="float:right">Submit</button>
-				</div><br>
+	<form action="{{ route('portfolio-model.update')}}" method="post" enctype="multipart/form-data">
+	@csrf
+		<div class="container">
+			<div class="row">
+				<div class="col-auto">
+					<div class="file btn button-lg" style="width:1110px">
+						<p style="float:left">Upload Portfolio : &nbsp
+						<input type="file" name="file"/></p>
+						<button type="submit" class="btn btn-outline-info" style="float:right">Submit</button>
+					</div><br>
+				</div>
 			</div>
-		</div>
-	</div><br><br>
+		</div><br><br>
+	</form>
 	@endif
 
 	<div class="container">
 		<div class="row">
-			<ul class="list-group">
-			{{ dd($picts) }}
-				@foreach $picts as $pict
-				<li class="list-group-item">
-					<img src="{{ $pict }}" class="card-img-top" alt="model">
-				</li>
-				@endforeach
-			</ul>
+		@foreach ($picts as $pict)
+			<div class="col-sm">					
+				<div class="card" style="width: 15rem;">
+					<div class="card-img">
+							<img src="{{ $pict->url }}" class="card-img-top" alt="model">
+							@if ($user->id === Auth::user()->id)
+							<div class="card-body">
+								<button class="btn btn-danger" type="submit" style="width:100%">delete</button>
+							</div>
+							@endif
+					</div>
+				</div>					
+			</div>	
+			@endforeach
 		</div>
 	</div>
 	@endsection						
