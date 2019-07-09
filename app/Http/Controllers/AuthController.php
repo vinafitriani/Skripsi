@@ -6,6 +6,7 @@ use App\User;
 use App\PictModel;
 use App\Pict;
 use App\UserModel;
+use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,8 +38,15 @@ class AuthController extends Controller
         }
     }
 
-    public function showInbox()
+    public function showInbox($inbox_id)
     {
+        $sender = Inbox::find($inbox_id)->sender;
+
+        Inbox::create([
+            'sender' => auth()->id(),
+            'receiver' => $sender->id,
+            'content' => "Saya menerima tawaran anda. Silahkan hubungi saya melalui nomor telepon ini " . auth()->user()->phone . ". Terima kasih!"
+        ]);
         return view('inbox');
     }
 
@@ -90,15 +98,43 @@ class AuthController extends Controller
     public function showReview($id)
     {
         $user = User::find($id);
-        return view('review')->with([
+        $reviews = Review::where('user_id', $user->id)->get();
+
+        return view('review', compact('reviews'))->with([
             'user' => $user,
+            'reviews' => $reviews,
         ]);
+    }
+
+    public function submit_review(Request $request)
+    {
+        $review = Review::create([
+            'user_id' => auth()->id(), 
+            'review_user' => $request->review_user,
+        ]);
+        return redirect()->route('review', [$review->user_id]);
     }
 
     public function searching_model(Request $request)
     {
-        $user = UserModel::where('gender', $request->gender)
-            ->where('height',$request->height);
-        
+        $users = User::when($request->keyword, function ($user) use ($request) {
+            $users->where('location', 'like', "%{$request->keyword}%");
+        })->get();
+
+        $users = UserModel::when($request->keyword, function ($user) use ($request) {
+            $users->orWhere('gender', 'like', "%{$request->keyword}%")
+                ->orWhere('height', 'like', "%{$request->keyword}%");
+        })->get();
+
+        return view('searching-model', compact('users'));
+    }
+
+    public function searching_recruiter(Request $request)
+    {
+        $users = User::when($request->keyword, function ($user) use ($request) {
+            $users->where('location', 'like', "%{$request->keyword}%");
+        })->get();
+
+        return view('searching-recruiter', compact('users'));
     }
 }

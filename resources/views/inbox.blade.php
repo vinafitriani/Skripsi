@@ -18,7 +18,7 @@
 					<p style="text-align:justify; color:brown">Selamat anda diterima untuk suatu pekerjaan. Silahkan hubungi saya melalui nomor telepon ini 081320910304. Terima kasih!</p>
 				</div>
 			</div>
-			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
+			<button class="btn btn-danger" type="submit">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
 
@@ -31,7 +31,7 @@
 					<p style="text-align:justify; color:brown">Terima kasih telah mengajukan kerja sama pekerjaan dengan saya. Namun saya meminta maaf karena anda belum bisa ikut serta pada project saya saat ini. Disisi lain, saya mengharapkan anda untuk mengajukan kerja sama pekerjaan dengan saya di lain waktu.Terima kasih!</p>
                 </div>
 			</div>
-			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
+			<button class="btn btn-danger" type="submit">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
 
@@ -44,16 +44,9 @@
 					<p style="text-align:justify; color:brown">Apakah anda tertarik untuk menjadi model saya?</p>                   
 				</div>
 			</div>
-			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
-            <button class="btn btn-success" type="button">{{ trans('sentence.accept') }}</button>
-            <button class="btn btn-warning" type="button">{{ trans('sentence.decline') }}</button>
-			<!-- if user accepted the request : muncul form input no telepon -->
-			<div class="container">
-				<div class="form-group">
-					<label for="phone">{{ trans('sentence.phonenumber') }} :</label>
-					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonenum">
-				</div>
-			</div>
+			<button class="btn btn-danger" type="submit">{{ trans('sentence.delete') }}</button>
+            <a href="#" class="btn btn-success" type="submit" name="acc_recruit">{{ trans('sentence.accept') }}</a>
+            <a href="#" class="btn btn-warning" type="submit" name="dec_recruit">{{ trans('sentence.decline') }}</a>
 		</div>
 	</div><br>
 
@@ -66,16 +59,9 @@
 					<p style="text-align:justify; color:brown">Apakah ada pekerjaan yang sesuai dengan kriteria saya?</p>                   
                 </div>
 			</div>
-			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
-            <button class="btn btn-success" type="button">{{ trans('sentence.accept') }}</button>
-            <button class="btn btn-warning" type="button">{{ trans('sentence.decline') }}</button>
-			<!-- if user accepted the request : muncul form input no telpon -->
-			<div class="container">
-				<div class="form-group">
-					<label for="phone">{{ trans('sentence.phonenumber') }} :</label>
-					<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phonenum">
-				</div>
-			</div>
+			<button class="btn btn-danger" type="submit">{{ trans('sentence.delete') }}</button>
+            <a href="#" class="btn btn-success" type="submit" name="acc_job">{{ trans('sentence.accept') }}</a>
+            <a href="#" class="btn btn-warning" type="submit" name="dec_job">{{ trans('sentence.decline') }}</a>
 		</div>
 	</div><br>
 
@@ -86,10 +72,9 @@
 			<div class="media">		
 				<div class="media-body">
 					<p style="text-align:justify; color:brown">Saya menerima tawaran anda. Silahkan hubungi saya melalui nomor telepon ini 081320910304. Terima kasih!</p>
-                    <small class="text-muted">Jun 11th, 2019</small>
 				</div>
 			</div>
-			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
+			<button class="btn btn-danger" type="submit">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
 
@@ -100,10 +85,9 @@
 			<div class="media">	
 				<div class="media-body">
 					<p style="text-align:justify; color:brown">Terima kasih atas tawaran anda. Namun saya belum bisa bekerja sama menjadi model anda untuk saat ini. Thank you!</p>
-                    <small class="text-muted">Jul 17th, 2019</small>
                 </div>
 			</div>
-			<button class="btn btn-danger" type="button">{{ trans('sentence.delete') }}</button>
+			<button class="btn btn-danger" type="submit">{{ trans('sentence.delete') }}</button>
 		</div>
 	</div><br>
     @endsection

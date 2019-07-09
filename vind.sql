@@ -65,7 +65,7 @@ CREATE TABLE `user` (
   `username` varchar(15) NOT NULL,
   `password` varchar(8) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `phone` int(15) NOT NULL,
+  `phone` int(12) NOT NULL,
   `location` varchar(50) NOT NULL,
   `profile-pict` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

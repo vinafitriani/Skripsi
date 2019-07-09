@@ -135,7 +135,7 @@
 											</tr>
 										</tbody>
 									</table>
-									<button class="btn btn-success" type="submit" style="width:100%">ask for job</a>
+									<button class="btn btn-success" type="submit" name="job" style="width:100%">ask for job</a>
 								</div>
 							</div>
 						</div>
@@ -171,15 +171,19 @@
 
 	<div class="container">
 			<div class="row">
-					@foreach ($picts as $pict)
+				@foreach ($picts as $pict)
 				<div class="col-sm">					
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
 								<img src="{{ $pict->url }}" class="card-img-top" alt="model">
 								@if ($user->id === Auth::user()->id)								
-								<div class="card-body">
-											<button class="btn btn-danger" type="submit" style="width:100%">delete</button>								
-								</div>
+									<div class="card-body">
+										<form method="post" action="{{ route('photo.delete', $pict->id) }}">
+												@csrf
+												@method('delete')
+												<button class="btn btn-danger" type="submit" style="width:100%">delete</button>								
+										</form>
+									</div>								
 								@endif
 						</div>						
 					</div>					

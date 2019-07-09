@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Pict;
 use Illuminate\Http\Request;
 
 class PictController extends Controller
@@ -93,6 +95,7 @@ class PictController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pict = Pict::find($id)->delete();
+        return back();
     }
 }

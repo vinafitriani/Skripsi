@@ -49,6 +49,12 @@
         @endif
       </div>
       <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone" maxlength="12" required autofocus>
+        <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
+        <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
+      </div>
+      <div class="form-group">
         <label for="loc">{{ trans('sentence.location') }}:</label>
         <input type="text" class="form-control" id="autocomplete" placeholder="Enter location" name="location" onFocus="geolocate()" maxlength="50" required>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>

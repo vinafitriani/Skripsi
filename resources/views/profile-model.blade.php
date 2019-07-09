@@ -139,7 +139,7 @@
 										</tr>
 									</tbody>									
 								</table>
-								<button class="btn btn-success" type="submit" style="width:100%">{{ trans('sentence.recruit') }}</a>
+								<button class="btn btn-success" type="submit" name="recruit" style="width:100%">{{ trans('sentence.recruit') }}</a>
 							</div>
 						</div>
 					</div>
