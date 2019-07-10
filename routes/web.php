@@ -26,7 +26,6 @@ Route::get('/about', 'HomeController@showAbout') -> name('about');
 Route::get('/category', 'HomeController@showCategory') -> name('category');
 Route::get('/review/{id}', 'AuthController@showReview') -> name('review');
 Route::get('/home', 'HomeController@showIndex') -> name('index');
-Route::post('/home', 'HomeController@showIndex') -> name('index-logout');
 Route::get('/home-model', 'AuthController@index') -> name('index-model');
 Route::get('/home-plk', 'AuthController@index') -> name('index-plk');
 Route::get('/profile-model/{user}', 'AuthController@profile_model') -> name('profile-model');
