@@ -133,9 +133,12 @@
 												<td>{{ trans('sentence.location') }}</td>
 												<td style="color:green">{{ $user->location }}</td>
 											</tr>
+											<tr>
+												<td>Email</td>
+												<td style="color:green">{{ $user->email }}</td>
+											</tr>
 										</tbody>
 									</table>
-									<button class="btn btn-success" type="submit" name="job" style="width:100%">ask for job</a>
 								</div>
 							</div>
 						</div>

@@ -26,7 +26,6 @@ return [
     'login' => 'Masuk',
     'logout' => 'Keluar',
     'name' => 'Nama',
-    'phonenumber' => 'Nomor Telepon',
     'postevent' => 'Unggah Acara',
     'profile' => 'Profil',
     'recruit' => 'Rekrut',

@@ -26,7 +26,6 @@ return [
   'login' => 'Sign In',
   'logout' => 'Sign Out',
   'name' => 'Name',
-  'phonenumber' => 'Phone Number',
   'postevent' => 'Post New Event',
   'profile' => 'Profile',
   'recruit' => 'Recruit',

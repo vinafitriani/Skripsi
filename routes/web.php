@@ -23,15 +23,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/about', 'HomeController@showAbout') -> name('about');
-Route::get('/apply-event', 'AuthController@apply_event') -> name('apply-event');
 Route::get('/category', 'HomeController@showCategory') -> name('category');
-Route::get('/edit-event', 'AuthController@edit_event') -> name('edit-event');
 Route::get('/review/{id}', 'AuthController@showReview') -> name('review');
 Route::get('/home', 'HomeController@showIndex') -> name('index');
+Route::post('/home', 'HomeController@showIndex') -> name('index-logout');
 Route::get('/home-model', 'AuthController@index') -> name('index-model');
 Route::get('/home-plk', 'AuthController@index') -> name('index-plk');
-Route::get('/inbox', 'AuthController@showInbox') -> name('inbox');
 Route::get('/profile-model/{user}', 'AuthController@profile_model') -> name('profile-model');
+Route::post('/profile-model/{user}/edit', 'AuthController@profile_model_edit') -> name('profile-model.edit');
 Route::get('/profile-plk/{id}', 'AuthController@profile_plk') -> name('profile-plk');
 Route::delete('/portfolio-plk-delete/{id}', 'PictController@destroy') -> name('photo.delete');
 Route::post('/searching-model', 'AuthController@searching_model')->name('searching-model');

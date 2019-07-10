@@ -40,13 +40,6 @@ class AuthController extends Controller
 
     public function showInbox($inbox_id)
     {
-        $sender = Inbox::find($inbox_id)->sender;
-
-        Inbox::create([
-            'sender' => auth()->id(),
-            'receiver' => $sender->id,
-            'content' => "Saya menerima tawaran anda. Silahkan hubungi saya melalui nomor telepon ini " . auth()->user()->phone . ". Terima kasih!"
-        ]);
         return view('inbox');
     }
 
@@ -71,6 +64,22 @@ class AuthController extends Controller
         ]);
     }
 
+    public function profile_model_edit(Request $request, User $user)
+    {
+
+        $user->update([
+            'fullname' => $request->fullname,
+            'location' => $request->location,           
+        ]);
+        
+        $user->userModel->update([
+            'gender'   => $request->gender,
+            'height'   => $request->height,
+        ]);
+
+        return redirect()->back();
+    }
+    
     public function profile_plk($id)
     {
             $user = User::findOrFail($id);
@@ -117,24 +126,17 @@ class AuthController extends Controller
 
     public function searching_model(Request $request)
     {
-        $users = User::when($request->keyword, function ($user) use ($request) {
-            $users->where('location', 'like', "%{$request->keyword}%");
-        })->get();
-
-        $users = UserModel::when($request->keyword, function ($user) use ($request) {
-            $users->orWhere('gender', 'like', "%{$request->keyword}%")
-                ->orWhere('height', 'like', "%{$request->keyword}%");
-        })->get();
+        $users = User::where('category', 'model')->where('location', 'like', "%{$request->location}%")->get();
+        
+        $userModel = UserModel::where('gender', 'like', "%{$request->gender}%")
+                ->orWhere('height', 'like', "%{$request->height}%")->get();
 
         return view('searching-model', compact('users'));
     }
 
     public function searching_recruiter(Request $request)
     {
-        $users = User::when($request->keyword, function ($user) use ($request) {
-            $users->where('location', 'like', "%{$request->keyword}%");
-        })->get();
-
+        $users = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->where('location', 'like', "%{$request->location}%")->get(); 
         return view('searching-recruiter', compact('users'));
     }
 }

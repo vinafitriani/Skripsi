@@ -25,7 +25,6 @@ class CreateUserTable extends Migration
             $table->rememberToken();
             $table->string('email', 30)->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('phone',12)->nullable();
             $table->string('location',50);
             $table->binary('profile_pict')->nullable();
             $table->string('category',20);

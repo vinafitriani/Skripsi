@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App;
 use App\User;
-use App\PictModel;
+use App\Pict;
 use App\UserModel;
 
 class HomeController extends Controller
@@ -33,6 +33,12 @@ class HomeController extends Controller
     }
     public function showIndex()
     {
-        return view('index');
+        $recruiters = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->get();
+        $models = User::where('category', 'model')->get();
+        
+        return view('index')->with([
+            'recruiters' => $recruiters,
+            'models' => $models,
+        ]);
     }
 }

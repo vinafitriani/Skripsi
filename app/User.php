@@ -51,7 +51,7 @@ class User extends Authenticatable
     
     public function userModel()
     {
-        return $this->hasOne('App\UserModel');
+        return $this->hasOne('App\UserModel', 'username', 'username');
     }
 
     public function photo()

@@ -43,25 +43,26 @@
 										<p>Masukkan data yang ingin anda edit saja</p>
 										<!-- Modal body -->
 										<div class="modal-body">
-											<form action="/action_page.php">
+											<form action="{{ route('profile-model.edit', $user) }}" method="POST">
+												@csrf
 												<div class="form-group">
 													<label for="uname">{{ trans('sentence.name') }} :</label>
-													<input type="text" class="form-control" id="uname" placeholder="Masukkan nama lengkap" name="fullname">
+													<input type="text" class="form-control" id="uname" value="{{ $user->fullname }}" name="fullname">
 												</div>
 												<div class="form-group">
 													<label for="loc">{{ trans('sentence.location') }} :</label>
-													<input type="text" class="form-control" id="autocomplete" placeholder="Masukkan kota tempat tinggal anda" onFocus="geolocate()" name="location">
+													<input type="text" class="form-control" id="autocomplete" value="{{ $user->location }}" onFocus="geolocate()" name="location">
 												</div>
 												<div class="form-group">
 													<label for="gender">{{ trans('sentence.gender') }} :</label>
-													<select class="custom-select" width="100%">
-														<option value="male">Male</option>
-														<option value="female">Female</option>
+													<select class="custom-select" width="100%" name="gender">
+														<option value="male" {{$user->userModel->gender == "male" ? 'selected' : ''}}>Male</option>
+														<option value="female" {{$user->userModel->gender == "female" ? 'selected' : ''}}>Female</option>
 													</select>
 												</div>
 												<div class="form-group">
 													<label for="hgt">{{ trans('sentence.height') }} :</label>
-													<input type="text" class="form-control" id="hgt" placeholder="Masukkan tinggi badan(cm)" name="height">
+													<input type="text" class="form-control" id="hgt" value="{{ $user->userModel->height }}" name="height">
 												</div>
 												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
 											</form>
@@ -130,6 +131,10 @@
 											<td style="color:green">{{ $user->location }}</td>
 										</tr>
 										<tr>
+											<td>Email</td>
+											<td style="color:green">{{ $user->email }}</td>
+										</tr>
+										<tr>
 											<td>{{ trans('sentence.gender') }}</td>
 											<td style="color:green">{{ $usermodel->gender }}</td>
 										</tr>
@@ -139,7 +144,6 @@
 										</tr>
 									</tbody>									
 								</table>
-								<button class="btn btn-success" type="submit" name="recruit" style="width:100%">{{ trans('sentence.recruit') }}</a>
 							</div>
 						</div>
 					</div>
@@ -180,7 +184,11 @@
 							<img src="{{ $pict->url }}" class="card-img-top" alt="model">
 							@if ($user->id === Auth::user()->id)
 							<div class="card-body">
-								<button class="btn btn-danger" type="submit" style="width:100%">delete</button>
+								<form method="post" action="{{ route('photo.delete', $pict->id) }}">
+									@csrf
+									@method('delete')
+									<button class="btn btn-danger" type="submit" style="width:100%">delete</button>								
+								</form>
 							</div>
 							@endif
 					</div>
