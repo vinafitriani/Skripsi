@@ -16,10 +16,6 @@ Route::get('locale/{locale}', function ($locale){
     return redirect()->back();
 });
 
-Route::get('/', function () {
-    return view('index');
-})->name('base');
-
 Auth::routes();
 
 Route::get('/about', 'HomeController@showAbout') -> name('about');
