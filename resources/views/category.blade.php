@@ -22,10 +22,8 @@
 								<p align="justify">Apabila anda seorang <b>model</b> ada beberapa keuntungan yang akan didapatkan apabila menggunakan <i>website</i> Vind.
 								Keuntungan pertama adalah mendaftar sebagai <i>user</i> Vind tidak akan dikenakan biaya apapun dan data diri yang harus dimasukkan tidaklah rumit.
 								Selanjutnya, fitur pencarian perekrut berdasarkan lokasi akan muncul apabila anda telah melakukan <i>login</i>.
-								Anda dapat melihat identitas dan foto portfolio terkait perekrut dengan mengklik nama ataupun foto perekrut tersebut. Setelah itu, apabila anda tertarik maka klik <i>button</i> ask for job.
-								Selain itu, anda juga dapat menerima maupun menolak penawaran pekerjaan terkait modelling dengan mengklik tombol terima atau tolak pada halaman inbox.
-								Agar mendapatkan banyak tawaran pekerjaan, anda harus menampilkan foto portofolio terbaik anda pada halaman profil.
-								Anda dapat menerima nomor telepon <i>photographer, makeup artist,</i> atau <i>fashion designer</i> yang bersangkutan apabila ia menerima anda untuk bekerja sama menjadi modelnya.</p>
+								Anda dapat melihat identitas dan foto portfolio terkait perekrut dengan mengklik nama ataupun foto perekrut tersebut. Setelah itu, apabila anda tertarik dapat menghubungi <i>user</i> perekrut melalui alamat email.
+								Agar mendapatkan banyak tawaran pekerjaan, anda harus menampilkan foto portofolio terbaik anda pada halaman profil.</p>
 							</div>
 						</li>
 				</div>
@@ -38,9 +36,7 @@
 								Keuntungan pertama adalah mendaftar sebagai <i>user</i> Vind tidak akan dikenakan biaya apapun dan data diri yang harus dimasukkan tidaklah rumit.
 								Selanjutnya, fitur pencarian model berdasarkan lokasi, tinggi badan, dan jenis kelamin akan muncul apabila anda telah melakukan <i>login</i>.
 								Anda dapat menelusuri info terkait identitas dan foto portfolio masing-masing pada halaman profil mereka dengan mengklik nama yang muncul dari hasil pencarian. 
-								Anda dapat menawarkan mereka pekerjaan dengan mengklik <i>button</i> recruit pada halaman profil mereka.
-								Agar model dapat tertarik untuk menerima tawaran anda, tampilkan foto portofolio terbaik anda pada halaman profil anda.
-								Anda dapat menerima nomor telepon model yang bersangkutan apabila ia setuju untuk menerima tawaran pekerjaan anda.</p>
+								Anda dapat menawarkan mereka pekerjaan dengan menghubungi <i>user</i> model melalui alamat email pada halaman profil mereka.</p>
 							</div>
 						</li>
 					</ul>

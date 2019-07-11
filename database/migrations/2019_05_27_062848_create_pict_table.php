@@ -23,9 +23,9 @@ class CreatePictTable extends Migration
             $table->string('client_file_name');
             $table->string('extension', 5);
             $table->unsignedInteger('size');
-            $table->string('mime');
-            $table->string('upload_by');
-            $table->string('dir');
+            $table->string('mime', 15);
+            $table->string('upload_by',3);
+            $table->string('dir',11);
             $table->timestamps();
         });
     }

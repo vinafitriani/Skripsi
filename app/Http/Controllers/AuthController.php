@@ -131,12 +131,13 @@ class AuthController extends Controller
         $userModel = UserModel::where('gender', 'like', "%{$request->gender}%")
                 ->orWhere('height', 'like', "%{$request->height}%")->get();
 
-        return view('searching-model', compact('users'));
+        return redirect()->back()->with(compact('users'));
     }
 
     public function searching_recruiter(Request $request)
     {
         $users = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->where('location', 'like', "%{$request->location}%")->get(); 
-        return view('searching-recruiter', compact('users'));
+        
+        return redirect()->back()->with(compact('users'));
     }
 }

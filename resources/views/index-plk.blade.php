@@ -46,7 +46,7 @@
 	<div class="container">
 			<div class="row">
 				@foreach ($users as $user)
-				<div class="col-sm">
+				<div class="col-md-">
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
 							<a href="{{ route('profile-model', $user) }}">
@@ -86,10 +86,11 @@
 
 			<div id="question1" class="collapse" aria-labelledby="headingOne" data-parent="#FAQ">
 				<div class="card-body">
-				Anda harus melakukan login terlebih dahulu agar dapat mencari model berdasarkan jenis kelamin, tinggi badan, dan lokasi.
+								Anda harus melakukan login terlebih dahulu agar dapat mencari model berdasarkan jenis kelamin, tinggi badan, dan lokasi.
                 Fitur pencarian model akan muncul pada homepage ketika anda login sebagai photographer, makeup artist, atau fashion designer.
                 Anda dapat menggunakan fitur ini untuk menemukan model secara cepat dan tepat.
-                Selain itu, anda juga dapat melihat halaman profil setiap model yang muncul dari hasil pencarian untuk mencari tau identitas dan fotoportofolio model bersangkutan.
+                Selain itu, anda juga dapat melihat halaman profil setiap model yang muncul dari hasil pencarian untuk mencari tau identitas dan foto portofolio model bersangkutan.
+								Apabila anda tertarik, maka anda dapat menghubungi user melalui alamat email.
 				</div>
 			</div>
   		</div>
@@ -107,8 +108,7 @@
 					Fitur pencarian perekrut akan muncul pada homepage ketika anda login sebagai model.
 					Anda dapat menggunakan fitur ini untuk mengajukan kerja sama pekerjaan pada perekrut secara cepat.
 					Selain itu, anda juga dapat melihat halaman profil setiap perekrut yang muncul dari hasil pencarian untuk mencari tau identitas dan foto portfolio model bersangkutan.
-					Apabila anda tertarik, maka anda dapat menekan button ask for job.
-					Setelah itu, anda tinggal menunggu pesan masuk dari perekrut tersebut melalui halaman inbox.
+					Apabila anda tertarik, maka anda dapat menghubungi user melalui alamat email.
 				</div>
 			</div>
 		</div>

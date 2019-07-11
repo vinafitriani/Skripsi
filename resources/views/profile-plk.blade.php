@@ -175,7 +175,7 @@
 	<div class="container">
 			<div class="row">
 				@foreach ($picts as $pict)
-				<div class="col-sm">					
+				<div class="col-md-3">					
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
 								<img src="{{ $pict->url }}" class="card-img-top" alt="model">

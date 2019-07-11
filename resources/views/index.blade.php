@@ -61,18 +61,21 @@
     https://getbootstrap.com/docs/4.3/layout/grid/ -->   
     <div class="container">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md-3">
             @foreach ($recruiters as $user)
                 <div class="card" style="width: 15rem;">
                     <div class="card-img">
-                        @if($user->profile_pict==true)
-                            <img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="recruiter">
-                        @else
-                            <img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="recruiter">
-                        @endif
+                        <a href="/login">
+                            @if($user->profile_pict==true)
+                                <img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="recruiter">
+                            @else
+                                <img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="recruiter">
+                            @endif
+                        </a>
                         <div class="card-body">
-                            <a href="/login"><h5 class="card-title" style="text-align:center">{{$user->fullname}}</h5></a>
-                            <p class="text-muted" align="center">{{$user->category}}</p>
+                                <a href="/login"><h5 class="card-title" style="text-align:center">{{$user->fullname}}</h5></a>
+                        </div>
+                        <p class="text-muted" align="center">{{$user->category}}</p>
                         </div>
                     </div>
                 </div>
@@ -89,11 +92,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm">
-        @foreach ($models as $user)
+        <div class="col-md-3">
+        @foreach ($models as $user)          
             <div class="card" style="width: 15rem;">
                 <div class="card-img">
-                    <a href="/login"><img src="{{ asset('images/portfolio/model1.jpg')}}" class="card-img-top" alt="model"></a>
+                    <a href="/login">
+                        @if($user->profile_pict==true)
+                            <img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="recruiter">
+                        @else
+                            <img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="recruiter">
+                        @endif
+                    </a>
                     <div class="card-body">
                         <a href="/login"><h5 class="card-title" style="text-align:center">{{$user->fullname}}</h5></a>
                     </div>
@@ -126,7 +135,8 @@
                 Anda harus melakukan login terlebih dahulu agar dapat mencari model berdasarkan jenis kelamin, tinggi badan, dan lokasi.
                 Fitur pencarian model akan muncul pada homepage ketika anda login sebagai photographer, makeup artist, atau fashion designer.
                 Anda dapat menggunakan fitur ini untuk menemukan model secara cepat dan tepat.
-                Selain itu, anda juga dapat melihat halaman profil setiap model yang muncul dari hasil pencarian untuk mencari tau identitas dan fotoportofolio model bersangkutan.
+                Selain itu, anda juga dapat melihat halaman profil setiap model yang muncul dari hasil pencarian untuk mencari tau identitas dan foto portofolio model bersangkutan.
+                Apabila anda tertarik, maka anda dapat menghubungi user melalui alamat email.
             </div>
         </div>
     </div>
@@ -144,8 +154,7 @@
 					Fitur pencarian perekrut akan muncul pada homepage ketika anda login sebagai model.
 					Anda dapat menggunakan fitur ini untuk mengajukan kerja sama pekerjaan pada perekrut secara cepat.
 					Selain itu, anda juga dapat melihat halaman profil setiap perekrut yang muncul dari hasil pencarian untuk mencari tau identitas dan foto portfolio model bersangkutan.
-					Apabila anda tertarik, maka anda dapat menekan button ask for job.
-					Setelah itu, anda tinggal menunggu pesan masuk dari perekrut tersebut melalui halaman inbox.
+					Apabila anda tertarik, maka anda dapat menghubungi user melalui alamat email.
 				</div>
 			</div>
 		</div>
