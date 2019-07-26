@@ -108,8 +108,10 @@ class AuthController extends Controller
     {
         $users = User::where('category', 'model')->where('location', 'like', "%{$request->location}%")->get();
         
-        $userModels = UserModel::where( 'gender', $request->gender)
-                ->where( 'height', $request->height)->get();
+        $usernames = UserModel::where( 'gender', $request->gender)
+        -> where( 'height', $request->height)->pluck('username');
+
+        $userModels =User::whereIn('username', $usernames)->get();
 
         return view('searching-model', compact('users', 'userModels'));
     }

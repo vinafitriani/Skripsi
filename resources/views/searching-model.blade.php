@@ -49,16 +49,16 @@
 					<div class="col-md-3">
 						<div class="card" style="width: 15rem;">
 							<div class="card-img">
-								<a href="{{ route('profile-model', $user) }}">
-									@if($user->profile_pict==true)
-										<img src="{{ asset ($user->profile_pict)}}" class="card-img-top" alt="recruiter">
+								<a href="{{ route('profile-model', $userModel) }}">
+									@if($userModel->profile_pict==true)
+										<img src="{{ asset ($userModel->profile_pict)}}" class="card-img-top" alt="recruiter">
 									@else
 										<img src="{{ asset ('images/user.png')}}" class="card-img-top" alt="recruiter">
 									@endif
 								</a>
 								<div class="card-body">
-									<a href="{{ route('profile-model', $user) }}"><h5 class="card-title" style="text-align:center">{{ $user->fullname }}</h5></a>
-									<p class="text-muted" align="center">{{ $user->category }}</p>
+									<a href="{{ route('profile-model', $userModel) }}"><h5 class="card-title" style="text-align:center">{{ $userModel->fullname }}</h5></a>
+									<p class="text-muted" align="center">{{ $userModel->category }}</p>
 								</div>
 							</div>
 						</div>
