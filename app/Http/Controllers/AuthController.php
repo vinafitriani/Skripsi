@@ -23,7 +23,7 @@ class AuthController extends Controller
             $userList = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->pluck('id');
 
             return view('index-model')->with([
-                'users' => User::whereIn('category', ['fashion', 'photographer', 'makeup'])->get(),
+                'users' => User::whereIn('category', ['fashion', 'photographer', 'makeup'])->take(4)->get(),
                 'picts' => PictModel::where('category'),
             ]);
         }
@@ -32,7 +32,7 @@ class AuthController extends Controller
             /*$picture = PictModel::whereIn('user_id', $userList)->get();*/
 
             return view('index-plk')->with([
-                'users' => User::where('category', 'model')->get(),
+                'users' => User::where('category', 'model')->take(4)->get(),
                 'picts' => PictModel::where('category'),
             ]);
         }
@@ -104,40 +104,23 @@ class AuthController extends Controller
         return redirect()->route('profile-model', [$pict->upload_by]);
     }
 
-    public function showReview($id)
-    {
-        $user = User::find($id);
-        $reviews = Review::where('user_id', $user->id)->get();
-
-        return view('review', compact('reviews'))->with([
-            'user' => $user,
-            'reviews' => $reviews,
-        ]);
-    }
-
-    public function submit_review(Request $request)
-    {
-        $review = Review::create([
-            'user_id' => auth()->id(), 
-            'review_user' => $request->review_user,
-        ]);
-        return redirect()->route('review', [$review->user_id]);
-    }
-
     public function searching_model(Request $request)
     {
         $users = User::where('category', 'model')->where('location', 'like', "%{$request->location}%")->get();
         
-        $userModel = UserModel::where('gender', 'like', "%{$request->gender}%")
-                ->orWhere('height', 'like', "%{$request->height}%")->get();
+        $userModel = UserModel::where( 'gender', $request->gender)
+                ->where( 'height', $request->height)->get();
 
-        return redirect()->back()->with(compact('users'));
+        return view('searching-model')->with([
+            'users' => $users,
+            'userModels' => $userModel
+        ]);
     }
 
     public function searching_recruiter(Request $request)
     {
         $users = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->where('location', 'like', "%{$request->location}%")->get(); 
         
-        return redirect()->back()->with(compact('users'));
+        return view('searching-recruiter', compact('users'));
     }
 }

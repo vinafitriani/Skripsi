@@ -50,7 +50,7 @@
       </div>
       <div class="form-group">
         <label for="loc">{{ trans('sentence.location') }}:</label>
-        <input type="text" class="form-control" id="autocomplete" placeholder="Enter location" name="location" onFocus="geolocate()" maxlength="50" required>
+        <input type="text" class="form-control" id="autocomplete" placeholder="Enter location" name="location" onFocus="geolocate()" maxlength="20" required>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
       </div>
@@ -72,10 +72,14 @@
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
+          <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
+        <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
         </div>
         <div class="form-group">
           <label for="hgt">{{ trans('sentence.height') }}:</label>
-          <input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height" maxlength="3">
+          <input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height" maxlength="3" required>
+          <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
+        <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
         </div>
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%">{{ trans('sentence.create') }}</button>

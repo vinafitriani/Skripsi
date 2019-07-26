@@ -16,7 +16,7 @@
 			@csrf 
 				<div class="row">                                                                  
 					<div class="col-auto" style="width:20%">
-						<input type="text" class="form-control" id="autocomplete" name="location" placeholder="Location" onFocus="geolocate()">
+						<input type="text" class="form-control" id="autocomplete" name="location" placeholder="{{ trans('sentence.location') }}" onFocus="geolocate()">
 					</div>
 					<div class="col-auto" style="width:20%">
 						<div class="wrap-input">
@@ -27,10 +27,10 @@
 						</div>	
 					</div>	
 					<div class="col-auto" style="width:20%">
-							<input type="text" class="form-control" name="height" placeholder="Height(cm)">
+							<input type="text" class="form-control" name="height" placeholder="{{ trans('sentence.height') }}(cm)">
 					</div>
 					<div class="col-auto" style="width:20%">
-						<input type="submit" class="btn btn-primary btn-block" value="Search">
+						<input type="submit" class="btn btn-primary btn-block" value="{{ trans('sentence.searchmodel') }}">
 					</div>
 				</div>
 			</form>
@@ -46,7 +46,7 @@
 	<div class="container">
 			<div class="row">
 				@foreach ($users as $user)
-				<div class="col-md-">
+				<div class="col-md-3">
 					<div class="card" style="width: 15rem;">
 						<div class="card-img">
 							<a href="{{ route('profile-model', $user) }}">

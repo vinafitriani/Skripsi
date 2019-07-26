@@ -61,8 +61,8 @@
     https://getbootstrap.com/docs/4.3/layout/grid/ -->   
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
             @foreach ($recruiters as $user)
+            <div class="col-md-3">
                 <div class="card" style="width: 15rem;">
                     <div class="card-img">
                         <a href="/login">
@@ -73,14 +73,13 @@
                             @endif
                         </a>
                         <div class="card-body">
-                                <a href="/login"><h5 class="card-title" style="text-align:center">{{$user->fullname}}</h5></a>
-                        </div>
-                        <p class="text-muted" align="center">{{$user->category}}</p>
+                            <a href="/login"><h5 class="card-title" style="text-align:center">{{ $user->fullname }}</h5></a>
+                            <p class="text-muted" align="center">{{ $user->category }}</p>
                         </div>
                     </div>
                 </div>
-            @endforeach
             </div>
+            @endforeach	
         </div>
     </div><br><hr class="hr-style"><br>
 
@@ -92,8 +91,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-        @foreach ($models as $user)          
+        @foreach ($models as $user)
+        <div class="col-md-3">          
             <div class="card" style="width: 15rem;">
                 <div class="card-img">
                     <a href="/login">
@@ -108,8 +107,8 @@
                     </div>
                 </div>
             </div>
-        @endforeach
         </div>
+        @endforeach
     </div>
 </div><br><hr class="hr-style"><br>
 

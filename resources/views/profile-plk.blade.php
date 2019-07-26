@@ -7,19 +7,6 @@
 @endif
 
 @section('content')
-	<!--https://getbootstrap.com/docs/4.3/components/breadcrumb/-->
-	<div class="container">
-		<div class="row">
-			<div class="col-auto" style="width:100%">
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item active" aria-current="page">Profile</li>
-						<li class="breadcrumb-item"><a href="{{ route('review', $user) }}">Review</a></li>
-					</ol>
-				</nav>
-			</div>
-		</div>
-	</div>
 
 	<!-- https://getbootstrap.com/docs/4.3/components/card/ -->
 	<div class="container">

@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -21,7 +20,6 @@ class User extends Authenticatable
         'username',
         'password',
         'email',
-        'phone',
         'location',
         'profile_pict',
         'category',
@@ -41,9 +39,6 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 
     public function pictModel(){
         return $this->hasMany('App\PictModel');

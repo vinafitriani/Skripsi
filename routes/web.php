@@ -20,7 +20,6 @@ Auth::routes();
 
 Route::get('/about', 'HomeController@showAbout') -> name('about');
 Route::get('/category', 'HomeController@showCategory') -> name('category');
-Route::get('/review/{id}', 'AuthController@showReview') -> name('review');
 Route::get('/home', 'HomeController@showIndex') -> name('index');
 Route::get('/home-model', 'AuthController@index') -> name('index-model');
 Route::get('/home-plk', 'AuthController@index') -> name('index-plk');
@@ -33,4 +32,3 @@ Route::post('/searching-recruiter', 'AuthController@searching_recruiter')->name(
 Route::post('/pict-update', 'PictController@update')->name('pict.update');
 Route::post('/portfolio-plk-update', 'AuthController@upload_portfolio_plk')->name('portfolio-plk.update');
 Route::post('/portfolio-model-update', 'AuthController@upload_portfolio_model')->name('portfolio-model.update');
-Route::post('/submit-review', 'AuthController@submit_review')->name('submit-review');

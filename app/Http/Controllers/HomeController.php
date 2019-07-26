@@ -31,10 +31,11 @@ class HomeController extends Controller
     {
         return view('category');
     }
+
     public function showIndex()
     {
-        $recruiters = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->get();
-        $models = User::where('category', 'model')->get();
+        $recruiters = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->take(4)->get();
+        $models = User::where('category', 'model')->take(4)->get();
         
         return view('index')->with([
             'recruiters' => $recruiters,
