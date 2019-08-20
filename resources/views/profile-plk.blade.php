@@ -24,10 +24,10 @@
 							@if ($user->id === Auth::user()->id)
 							<!--https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_modal&stacked=h-->
 							<button type="button" style="width:100%" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-								edit profile
+								{{ trans('sentence.editProfile')}}
 							</button><br><br>
 							<button type="button" style="width:100%" class="btn btn-success" data-toggle="modal" data-target="#modalPict">
-								change photo
+								{{ trans('sentence.changePhoto')}}
 							</button>
 							@endif
 
@@ -38,7 +38,7 @@
 									
 										<!-- Modal Header -->
 										<div class="modal-header">
-											<h4 class="modal-title">Edit Profile</h4>											
+											<h4 class="modal-title">{{ trans('sentence.editProfile')}}</h4>											
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
 										<p align="center">Masukkan data yang ingin anda edit saja</p>
@@ -47,11 +47,11 @@
 											<form action="/action_page.php">
 												<div class="form-group">
 													<label for="uname">{{ trans('sentence.name') }} :</label>
-													<input type="text" class="form-control" id="uname" placeholder="Masukkan nama lengkap" name="fullname">
+													<input type="text" class="form-control" id="uname" value="{{ $user->fullname }}" name="fullname">
 												</div>												
 												<div class="form-group">
 													<label for="loc">{{ trans('sentence.location') }} :</label>
-													<input type="text" class="form-control" id="autocomplete" placeholder="Masukkan kota tempat tinggal anda" onFocus="geolocate()" name="location">
+													<input type="text" class="form-control" id="autocomplete" value="{{ $user->location }}" onFocus="geolocate()" name="location">
 												</div>																								
 												<button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
 											</form>
@@ -71,7 +71,7 @@
 									
 										<!-- Modal Header -->
 										<div class="modal-header">
-											<h4 class="modal-title">Change Photo</h4>											
+											<h4 class="modal-title">{{ trans('sentence.changePhoto') }}</h4>											
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
 
@@ -167,13 +167,30 @@
 						<div class="card-img">
 								<img src="{{ $pict->url }}" class="card-img-top" alt="model">
 								@if ($user->id === Auth::user()->id)								
-									<div class="card-body">
-										<form method="post" action="{{ route('photo.delete', $pict->id) }}">
-												@csrf
-												@method('delete')
-												<button class="btn btn-danger" type="submit" style="width:100%">delete</button>								
-										</form>
-									</div>								
+								<div class="card-body">								
+									<button type="button" style="width:100%" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">delete</button>															
+								</div>
+										<!-- Modal Delete -->
+									<div id="modalDelete" class="modal">
+										<div class="modal-dialog modal-confirm">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h4 class="modal-title">Are you sure?</h4>	
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												</div>
+												<div class="modal-body">
+													<p>Do you really want to delete these records? This process cannot be undone.</p>
+												</div>
+												<div class="modal-footer">												
+													<form method="post" action="{{ route('photo.delete', $pict->id) }}">
+														@csrf
+														@method('delete')
+														<button type="submit" class="btn btn-danger">Delete</button>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>   								
 								@endif
 						</div>						
 					</div>					

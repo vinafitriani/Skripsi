@@ -10,8 +10,8 @@
 	<!--https://getbootstrap.com/docs/4.3/components/jumbotron/-->
 	<div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/home-pict.jpg')}}'); height: 50%;">
   	<div class="container">
-    	<h1 class="display-4">Become a Top Models</h1>
-			<p class="lead">from using Vind Website</p>
+    	<h1 class="display-4">{{ trans('sentence.modelWord1') }}</h1>
+			<p class="lead">{{ trans('sentence.modelWord2') }}</p>
 			<form action="{{route('searching-recruiter')}}" method="post">
 			@csrf
 				<div class="row">                                                                  
@@ -23,13 +23,13 @@
 					</div>
 				</div>
 			</form>
-  	</div>
+		</div>
 	</div><br><hr class="hr-style"><br>
 
 <!--Photo by Johny Goerend on Unsplash-->
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron1.jpg')}}');">
 	<div class="container">
-	<h2 align="center">The Recruiters</h2>
+	<h2 align="center">{{ trans('sentence.recruiter')}}</h2>
 	</div>
 </div><br>
 

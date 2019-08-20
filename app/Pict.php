@@ -105,4 +105,9 @@ class Pict extends Model
 
         return "portfolio";
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

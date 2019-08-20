@@ -72,7 +72,7 @@ class PictController extends Controller
     {
         $user = auth()->user();
         request()->validate([
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
 
         ]);
 

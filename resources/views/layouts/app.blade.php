@@ -34,7 +34,7 @@
 		<div class="col-md-auto">
 			<header class="home-container">	
 				<h1><b>Vind</b></h1>
-				<h6>Expand your Job as models | Recruit Top Models for Help your Careers.</h6>		
+				<h6>{{ trans('sentence.vindWord') }}</h6>		
 			</header>
 		</div>
 	</div>
@@ -61,6 +61,8 @@
 	<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 			@csrf
 	</form>
+	<img src="{{ asset ('images/index.png')}}" alt="Avatar" class="avatar" style="position:relative; float:right; right:10px; top:5px">
+	<p style="position:relative; float:right; color:white; top:10px; right:15px">Tivanka</p>
 </div>
 @else
 <div class="topnav">
@@ -72,6 +74,8 @@
 	<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 			@csrf
 	</form>
+	<img src="{{ asset ('images/index.png')}}" alt="Avatar" class="avatar" style="position:relative; float:right; right:10px; top:5px">
+	<p style="position:relative; float:right; color:white; top:10px; right:15px">Tiffany</p>
 </div>
 @endif
 @endauth

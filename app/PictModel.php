@@ -11,9 +11,4 @@ class PictModel extends Model
     protected $fillable = [
         'portfolio',
     ];
-
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
 }

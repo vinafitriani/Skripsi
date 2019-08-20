@@ -12,10 +12,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
@@ -23,7 +19,7 @@ class AuthController extends Controller
             $userList = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->pluck('id');
 
             return view('index-model')->with([
-                'users' => User::whereIn('category', ['fashion', 'photographer', 'makeup'])->take(4)->get(),
+                'users' => User::whereIn('category', ['fashion', 'photographer', 'makeup'])->orderBy('created_at', 'desc')->take(4)->get(),
                 'picts' => PictModel::where('category'),
             ]);
         }
@@ -32,26 +28,11 @@ class AuthController extends Controller
             /*$picture = PictModel::whereIn('user_id', $userList)->get();*/
 
             return view('index-plk')->with([
-                'users' => User::where('category', 'model')->take(4)->get(),
+                'users' => User::where('category', 'model')->orderBy('created_at', 'desc')->take(4)->get(),
                 'picts' => PictModel::where('category'),
             ]);
         }
     }
-
-    public function showInbox($inbox_id)
-    {
-        return view('inbox');
-    }
-
-    /*public function showProfile()
-    {
-        if (Auth::user()->category == "model"){
-            return view('profile-model');
-        }
-        else {
-            return view('profile-plk');
-        }
-    }*/
 
     public function profile_model(User $user)
     {
@@ -111,7 +92,7 @@ class AuthController extends Controller
         $usernames = UserModel::where( 'gender', $request->gender)
         -> where( 'height', $request->height)->pluck('username');
 
-        $userModels =User::whereIn('username', $usernames)->get();
+        $userModels = User::whereIn('username', $usernames)->get();
 
         return view('searching-model', compact('users', 'userModels'));
     }

@@ -40,8 +40,8 @@ class User extends Authenticatable
      * @var array
      */
 
-    public function pictModel(){
-        return $this->hasMany('App\PictModel');
+    public function pict(){
+        return $this->hasMany('App\Pict');
     }
     
     public function userModel()

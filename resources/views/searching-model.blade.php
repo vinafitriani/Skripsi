@@ -10,8 +10,8 @@
 <!--https://getbootstrap.com/docs/4.3/components/jumbotron/-->
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/home-pict.jpg')}}'); height: 50%;">
   	<div class="container">
-    	<h1 class="display-4">Recruit any Top Models</h1>
-			<p class="lead">from using Vind Website</p>
+    	<h1 class="display-4">{{ trans('sentence.recruiterWord')}}</h1>
+			<p class="lead">{{ trans('sentence.modelWord2')}}</p>
 			<form action="{{route('searching-model')}}" method="post">
 			@csrf 
 				<div class="row">                                                                  
@@ -39,7 +39,7 @@
 	
 	<div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron.jpg')}}');">
   	<div class="container">
-	  <h2 style="text-align:center; color:white">Models</h2>
+	  <h2 style="text-align:center; color:white">{{ trans('sentence.model')}}</h2>
   	</div>
 	</div><br>
 	

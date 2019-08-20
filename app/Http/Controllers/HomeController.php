@@ -34,8 +34,8 @@ class HomeController extends Controller
 
     public function showIndex()
     {
-        $recruiters = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->take(4)->get();
-        $models = User::where('category', 'model')->take(4)->get();
+        $recruiters = User::whereIn('category', ['fashion', 'photographer', 'makeup'])->orderBy('created_at', 'desc')->take(4)->get();
+        $models = User::where('category', 'model')->orderBy('created_at', 'desc')->take(4)->get();
         
         return view('index')->with([
             'recruiters' => $recruiters,

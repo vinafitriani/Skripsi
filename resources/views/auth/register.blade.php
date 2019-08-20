@@ -41,7 +41,7 @@
       </div>
       <div class="form-group">
         <label for="mail">Email:</label>
-        <input type="text" class="form-control" id="mail" placeholder="Enter email address" name="email" maxlength="30" required autofocus>
+        <input type="email" class="form-control" id="mail" placeholder="Enter email address" name="email" maxlength="30" required autofocus>
         <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
         <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
         @if ($errors->has('email'))
@@ -72,14 +72,10 @@
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-          <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
-        <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
         </div>
         <div class="form-group">
           <label for="hgt">{{ trans('sentence.height') }}:</label>
-          <input type="text" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height" maxlength="3" required>
-          <div class="valid-feedback">{{ trans('sentence.validfeedback') }}.</div>
-        <div class="invalid-feedback">{{ trans('sentence.invalidfeedback') }}.</div>
+          <input type="number" class="form-control" id="hgt" placeholder="Enter height(cm)" name="height" min="100" max="200">
         </div>
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%">{{ trans('sentence.create') }}</button>

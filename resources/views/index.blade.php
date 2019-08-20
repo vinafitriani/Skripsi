@@ -7,9 +7,10 @@
 <!--https://getbootstrap.com/docs/4.3/components/jumbotron/-->
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/home-pict.jpg')}}'); height: 50%;">
 <div class="container">
-    <h1 class="display-4">Find your Job </h1>
-        <p class="lead">and Become a Top Model</p>
+    <h1 class="display-4">{{ trans('sentence.homeWord1')}} </h1>
+    <p class="lead">{{ trans('sentence.homeWord2')}}</p><br><br><br><br><br><br>
 </div>
+<p style="color:grey; padding-left:10px; font-size:10px">Source: https://www.alejandrodemiguel.com/wp-content/uploads/slider2018-5.jpg</p>
 </div><br>
 
 <!--https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_panels_contextual&stacked=h-->
@@ -19,10 +20,7 @@
             <div class="panel-group">
                 <div class="panel panel-info">
                     <div class="panel-heading">{{ trans('sentence.aboutvind') }}</div>
-                        <div class="panel-body" style="text-align:justify">Vind merupakan website job searching untuk model peraga busana, serta membantu photographer, fashion designer, dan makeup artist dalam menemukan model yang sesuai dengan kategori yang diinginkan berdasarkan lokasi, jenis kelamin, dan tinggi badan.
-                        Anda dapat mencari model yang diinginkan melalui fitur searching pada homepage setelah melakukan login.
-                        Selain itu, Vind menyediakan tampilan profil untuk setiap user dimana terdapat foto-foto portofolio yang dapat digunakan sebagai bahan pertimbangan dalam proses perekrutan seorang model.
-                        Vind membantu mempermudah pekerjaan bagi seseorang yang memiliki profesi sebagai berikut :
+                        <div class="panel-body" style="text-align:justify">{{ trans('sentence.homeAbout')}}
                             <ul>
                                 <li>Model</li>
                                 <li>Photographer</li>
@@ -40,9 +38,9 @@
                     <div class="card-header">{{ trans('sentence.contact') }}</div>
                     <div class="card-body text-info">
                         <h5 class="card-title" style="color:black">Email</h5>
-                        <p class="card-text" style="color:green">vinanurfitriani@gmail.com</p>
+                        <p class="card-text" style="color:green">vindwebsite@gmail.com</p>
                         <h5 class="card-title" style="color:black">Nomor Telepon</h5>
-                        <p class="card-text" style="color:green">081320910304</p>
+                        <p class="card-text" style="color:green">(022) 7215324</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +51,7 @@
 <!--Photo by Johny Goerend on Unsplash-->
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron1.jpg')}}');">
 <div class="container">
-    <h2 align="center">The Recruiters</h2>
+    <h2 align="center">{{ trans('sentence.recruiter') }}</h2>
 </div>
 </div><br>
 
@@ -85,7 +83,7 @@
 
 <div class="jumbotron jumbotron-fluid" style="background-image:url('{{ asset('images/jumbotron.jpg')}}');">
 <div class="container">
-    <h2 style="text-align:center; color:white">The Models</h2>
+    <h2 style="text-align:center; color:white">{{ trans('sentence.model') }}</h2>
 </div>
 </div><br>
 
